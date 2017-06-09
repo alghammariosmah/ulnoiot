@@ -1,0 +1,48 @@
+
+## Connecting to pi zero:
+
+	* Wifi name:
+	* iotempire-392bf9
+
+	* password:internetofthings
+
+	* Host Name or IP address:pi@192.168.12.1
+
+	* user: pi
+	* Password: ulnoiot
+
+	* connect to ulnoiot option which is 3
+	
+
+
+
+
+## Connecting Wmos to pi zero for:
+	* on the command line type:
+		flash_wemosd1mini
+	* First we flash and then we deploy. 
+		deploy_wemosd1mini
+		console 
+	* then we will be in the device.
+	>>>
+
+
+## Led on/off conf:
+	* help("wifi")wewe
+	* wip
+	* onboardled.init(Pin.OUT) 
+	* onboardled.on()  / off()
+
+## connecting to the pi device:
+	* http://micropython.org/webrepl/
+	* wip on command line to extract the IP address
+
+## some Frameware on ulnoiot bash:
+	* git gui
+	* git pull
+	* download_firmware
+	* fix_bin
+	* flash_esp82666
+	* type on the website ws://192.168.12.135:8266/  Password: ulnoiot
+	* You are logged in. 
+	

@@ -1,0 +1,20 @@
+Scenarios and application domains:
+1. Remote controlling.
+2. Intelligent network and security. 
+
+Techs:
+1. Internet network
+2. Local Network + Internet network , mobile app
+
+Feasibility:
+- Is it doable?
+	1. Yes.
+	2. Yes.
+- What not?
+- When? 
+	1. Can be implemented currently.
+	2. The same
+
+Weirdness/Craziness:
+1. Weird. 
+2. Crazy. 
