@@ -1,0 +1,6 @@
+Reporter: name
+Assigned: name
+Start: date time
+Finished: date time
+
+Description: bla bla bla NO CONTENT
