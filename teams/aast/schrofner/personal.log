@@ -40,3 +40,16 @@ weirdness/crazyness (concerns?)
 1. cars: weird
 2. security concerns! what if that building would be hacked?
 2. centralised approach
+
+##Practical part
+plugin pi, connect to strongest ap using password: internetofthings
+
+open a terminal an use:
+ssh pi@192.168.12.1
+
+using the password: ulnoiot
+
+once connected a byobu will open up
+f2 can be used to create a new session
+
+you can verify that you're connected with the correct pi by issuing "lsblk", then plugin a usb stick and run "lsblk" again to verify that the usb stick is detected
