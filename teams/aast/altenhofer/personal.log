@@ -42,13 +42,61 @@
 	* self driving cars, now under some concerns(prototypes).
 	* dynamic routing (start up with chailift, to reduce the "jams")
 	* access control system, now under some conerns (not like in the clip)
-	* smart light systems, now
+	* smart light systems, now with additional hardware(like amazon harmony hub)
 
 ###weirdness/crazyness (any concerns?)
 	* security, can everybode use this, surveillance?
 	* modular buildings, in sense of changing rooms.
 
 ## 10:40 - 12:00 setup repository
-
 	* add personal log files
 	* created folder hirachy
+
+# Starting the practical part
+
+## 13:00 - 16:15 get started with raspberry pi
+	* connect notebook the the wifi iotempire-xxxxxx
+	* connection to the correct device, check with usb stick and check mounts
+	* problems encountered: 
+		* could not connect to the pi
+		* after password nothing happens(no sessions/servers appeared)
+		* wrong passwords will be reconized
+		* used putty.exe
+		* tried with git-bash works like a charm
+		* ssh pi@192.168.12.1 do the work
+		* putty version wasnt working correctly.
+	* device: pi zero + powersupply + wmos
+	* setup putty.exe with hostname pi@192.168.12.1 pass: ulnoiot, connect
+	* let the led flash up on the wmos adapter
+#### led blink step by step
+	* connection archieved
+	* 2 break // use 2. byobu session
+	* to enter wifi access point, F6 to exit
+	* 3 to use ulnoiot
+	* plug in wmos wifi adapter
+	* wip // check ip
+	* flash_wmosd1mini // flash the adapter
+	* deploy_wmosd1mini // deploy the adapter, flash+deploy puts the configs on the adpater
+	* console // enter interface console
+	* help("wifi") // wifi help
+	* wifi("iotempire-392bf9", "internetofthings") // reset the adapter
+	* onboardled.init(Pin.OUT) // init the led on the adapter
+	* onboardled.on() // on/off is switched, due to the wireing in the adapter
+	* close console // ctrl + altgr + 9
+#### update and use wifi
+	* on the ulnoiot interface -> git pull -> download_firmware -> 
+	* fix_bin
+	* flash_ESP8266
+	* deploy_wmosd1wmini
+	* console
+	* wifi("iotempire-392bf9", "internetofthings") // new connect we flashed new firmwarew
+	* reset()	
+	* wip
+	* mqtt("192.186.12.1", "test") // ip of the raspberry pi not the apdater
+	* import ulnoiot.shield.devkit1_2led3but
+	* devices
+	* run()
+	* rapberrypi: mqtt_send test/devicename/set on
+
+## 16:15 - XX:XX research for debate
+	* 
