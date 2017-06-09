@@ -1,0 +1,25 @@
+#scenarios and application domains
+	*light switch over the internet
+	*controll remote cars over the internet -> maybe security, privacy
+	*turn on stereo over the internet -> entertainment
+	*home and building in bigger sense -> buildings operate/ is networking like organisms
+	*operation systems -> devices interact seamingless with the supply management.
+	*dynamic route management for lifts etc. -> energy, logistics
+
+#technologies
+	*internet
+	*plug and go
+	*modular buildings
+	*access control systems (open door concept)
+	*smart light systems	
+
+#feasibility, what doable, what not, when?
+	*remote turn on devices, now
+	*self driving cars, now under some concerns(prototypes).
+	*dynamic routing (start up with chailift, to reduce the "jams")
+	*access control system, now under some conerns (not like in the clip)
+	*smart light systems, now
+
+#weirdness/crazyness (any concerns?)
+	*security, can everybode use this, surveillance?
+	*modular buildings, in sense of changing rooms.

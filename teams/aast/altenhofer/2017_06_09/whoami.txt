@@ -1,0 +1,17 @@
+#Who are you, why are you studying Mobile Computing?
+
+	*Chris, Bachelors Degree in Mobile Computing in Hagenberg.
+	*I started the master because i think mobile stuff is the 
+	future and i like working on mobile devices.
+
+#What do you expect from H&B Automation?
+
+	*I expect some hands-on on some hardware and technologies we need in our homes and future homes.
+	*Maybe some stuff we can use at home as well.
+
+#Strength and weaknesses!
+
+	*i currently work as part time android dev. im good at programming and working 
+	in a team, using version control systems.
+	*not so good at dokumentation
+	*not good at linux
