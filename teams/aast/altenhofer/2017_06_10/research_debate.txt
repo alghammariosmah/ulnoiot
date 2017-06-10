@@ -1,15 +1,18 @@
 ### Environmentally friendly, increase energy efficiency, less costs:
 	* dim, turn off lights.
-		- walk out of the door and forget to turn off light? check via smartphone.
+		- walk out of the door and forget to turn off light? check via smartphone. There are some applications which allow
+		you to turn off all lights with a simple click on one button. This may be helpful when you go to bed and dont want
+		to check if the light a switched off in every room in the whole house.
 		
 	* Thermostats for controll temperature perfect. 
 		- most thermostats are already programmable nowadays, which is actual a home automation device.
 		- but how often are the schedules overriden or adapted?
 		these thermostats in addition with some smart sensors will help you to cool/heat your flat
-		in the most efficient possible way.
+		in the most efficient possible way. The sensors check the current temperature inside as well as outside and adapt
+		the temperature perfektly.
 		- those smarthome tools are note only eco-savvy, they are also very easy on the wallet,  
 		Just use the smartphone or the computer to inform the smart thermostat or A/C that you coming home,
-		or that you will arive later. the thermostat and A/C now can perfectly adapt the temperature in a cost
+		or that you will arrive later. the thermostat and A/C now can perfectly adapt the temperature in a cost
 		efficiant way. because it doesnt heat up or cool down your flat when it hasnt to.
 
 	* can all be controlled and monitored for optimal energy efficiency, cost savings.
@@ -19,8 +22,15 @@
 		- also you can spot out inefficient and huge powerconsuming devices, like fridges, 
 		and maybe replace them with newer models.
 		- also some electical power providers have some kind of lower rates on non-peak usage times.
-		with the monitoring you can spot out this timeslots and supply the big usage itmes in these times.
+		with the monitoring you can spot out this timeslots and supply the big usage items in these times.
+		- as in the article of smarthome.com a average household in the USA spends nearly 2000$ a year on
+		energy costs. 45% percent of this costs are on only for heating and cooling. As already mentioned most common
+		homes are already equiped with programmable thermostats. 
+		depending on the climate you can save up to 150$ on your yearly bills just by programm those thermostats
+		right and use the heating in the most efficient way.
 
 ### Links:
 	* http://freshome.com/home-automation-essential-energy-efficiency/
 	* http://www.yourhome.gov.au/energy/home-automation
+	* https://www.clickatell.com/articles/technology/the-pros-and-cons-of-smarthomes/
+	* http://www.smarthome.com/sc-save-energy-the-smarthome-way
