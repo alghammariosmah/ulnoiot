@@ -28,3 +28,7 @@
 * https://w3.usa.siemens.com/buildingtechnologies/us/en/Documents/LinkProject/Smart-building-white-paper-FINAL-2012.pdf
 * https://www.deerns.com/about-deerns/news/smart-buildings-increase-personal-productivity?news_id=860
 * https://wipebook.com/blogs/news/can-smart-buildings-increase-productivity
+* http://www.networkworld.com/article/2925722/security0/home-security-demystified-how-to-build-a-smart-diy-system.html
+* http://www.techradar.com/how-to/world-of-tech/how-to-protect-your-smart-home-1328600
+* http://www.ijser.org/researchpaper%5CSmart-Home-Automated-Control-System-Using-Android-Application-and-Microcontroller.pdf
+* https://www.asmag.com/showpost/16499.aspx
