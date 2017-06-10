@@ -1,12 +1,21 @@
-Friday, 9. June 09:40
-Bachelor, complete systems, mixture hardware software
+#Friday, 9. June 09:40
+###Gerald Teufl
+#Who are you, why are you studying Mobile Computing?
+Gerald from lower austria, also did the Bachelor in Mobile Computing, like the smaller systems
+which are a mixture of hardware and software, using harware with sensors and develop server software, apps
+and the communication between them.
 
-Fits perfect -> IoT, wlan driver, writing software, play with sensors, hardware, connection
+#What do you expect from H&B Automation?
+I already have experience with hardware devices and some IoT devices but not in the H&B area. I expect
+that I can extend my skills in this area.
 
-Team -> programming, linux, networks, documentation,
-perfectionist, 
+#Strength and weaknesses?
+My strength are that I have experience with linux, hardware and networks and I like it to work in a team. I
+also have no problems with documentation. A weakness and strength at the same time is that I am a 
+perfectionist. Moreover, I have basic experience with git but not that much with advanced git functions. 
 
 
+#Watching two movies and answer questions
 What might be doable?
 What not?
 When?
@@ -26,11 +35,64 @@ Movie 2:
 Displays -> AR, VR, just one guy monitors everything
 Holograms -> not in the near future
 Rooms moving -> doable but quiet far away
-Doorless -> doors?
+Doorless doors -> what if somebody is not allowed to enter?
 Navigation -> doable
-Modularity
+Modularity -> doable
 Intelligent networking -> doable
-Energy management -> future
-Lightning react on emergancy, reaction on full escape ways
+Energy management -> near future
+Lightning reacts on emergancy, reaction on full escape ways
 Security -> increase security but also opens new doors for security issues
-Splitting elevators
+
+#Friday, 9. June 13:00
+Flash micro sd card
+Connect to wifi access point of raspberry pi 3 (iotempire-b78ea5)
+Connect via ssh to the raspberry pi 3
+Change from password authentication to public/private key authentication
+Create key pair and copy public key to authorized keys on raspberry pi 3
+mcedit -> editor
+change wifi access point name to "teuschro" with "schroteu"
+
+First step:
+ulnoiot command to get into the environment
+wemosd1mini can then be flashed with the command flash_wemosd1mini
+next step is to deploy -> deploy_wemosd1mini (2 times probably)
+
+type "console" -> serial connection
+"help" -> help documentation
+
+init led -> "onboardled.init(Pin.OUT)"
+toggle led -> "onboardled.on()" and "onboardled.off()"
+
+Connect wemosd1mini with wifi:
+wscan -> scan wifi networks
+wifi("teuschro", "schroteu")
+
+wip -> shows wireless ip -> 192.168.12.18
+
+pull git repo for new firmware on raspberry pi 3
+firmware download -> download newest firmware
+fix_bin -> binary fixes
+flash_esp8266 -> flashing
+-> again deploying
+
+micropython webrepl was not working with Firefox on Linux and Windows but
+it works on Microsofts Edge browser on Windows
+
+mqtt("192.168.12.1", "test")
+help("shield")
+
+reset
+import devkit1_2led3but
+devices -> show devices
+
+run() -> to start
+
+byobu -> session management
+
+
+
+
+
+
+
+
