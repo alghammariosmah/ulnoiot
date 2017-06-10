@@ -22,9 +22,9 @@
 ### Links:
 
 * https://www.clickatell.com/articles/technology/the-pros-and-cons-of-smarthomes/
-
+* http://freshome.com/home-automation-essential-energy-efficiency/
+* http://www.yourhome.gov.au/energy/home-automation
 * http://www.caba.org/documents/Presentations/productivity-webinar/CABA-NRC-Productivity-Project-webinar-20150710.pdf
-
 * https://w3.usa.siemens.com/buildingtechnologies/us/en/Documents/LinkProject/Smart-building-white-paper-FINAL-2012.pdf
 
 * https://www.deerns.com/about-deerns/news/smart-buildings-increase-personal-productivity?news_id=860
