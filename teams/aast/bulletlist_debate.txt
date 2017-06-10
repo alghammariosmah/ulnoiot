@@ -1,24 +1,28 @@
 # Home and Building Pro-Side:
 ### Advantages
-- (Flo) Time / work efficiency:
+- (Flo) Time, work efficiency, employee health:
 	* can be used to reduce the amount of time required for work flows do stuff
 	* Save costs
-	* work more efficient	
+	* work more efficiently
 
 - (Gertsch) Security:
 	* smart homes are well-known for their improved security.
 	* cameras -> send to smartphone
-	* automated lights, simulate you are at home when on vaccation.
+	* automated lights, simulate you are at home when on vacation.
 
 - (Chris) Environmentally friendly, increase energy efficiency, less costs:
 	* dim lights.
-	* Thermostats for controll air conditioning perfect. 
+	* Thermostats to control air conditioning perfectly. 
 	* can all be controlled for optimal energy efficiency.
 
 - Customization. You can include as many or as few of these products as you choose.
-- Ease. It’s quick and simple to install these systems.
+- Ease. It's quick and simple to install these systems.
 - Convenience. All of your products will be programmed to your needs.
 
 ### Links:
 
 * https://www.clickatell.com/articles/technology/the-pros-and-cons-of-smarthomes/
+
+* http://www.caba.org/documents/Presentations/productivity-webinar/CABA-NRC-Productivity-Project-webinar-20150710.pdf
+
+* https://w3.usa.siemens.com/buildingtechnologies/us/en/Documents/LinkProject/Smart-building-white-paper-FINAL-2012.pdf
