@@ -5,7 +5,7 @@
 	* Save costs
 	* work more efficiently
 
-- (Gertsch) Security:
+- (Gertsch) Security and Safety:
 	* smart homes are well-known for their improved security.
 	* cameras -> send to smartphone
 	* automated lights, simulate you are at home when on vacation.
