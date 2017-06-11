@@ -1,5 +1,7 @@
 #Debate
 
+See 2017-06-10/debate.md for original quotes and links.
+
 Benefits from automating a building:
 - more comfortable working environment, (green buildings) score higher in:
   * aesthetic appearance
@@ -8,9 +10,10 @@ Benefits from automating a building:
     + e.g. on days where only part of the staff is at work, the HVAC can kept at a minimum
   * ventilation & temperature
   * workplace image
-  * lighting and room temperature can be adapted to individual likings
+  (* lighting and room temperature can be adapted to individual likings)
 - reduce workload for building operations
-  * parameters of the building can be adapted by individuals according to their need.    they do not need staff to change things.
+  * parameters of the building can be adapted by individuals according to their needs.
+  they do not need staff to change things.
 - fix errors faster
   * building fully integrated, mistakes detected quickly
   * notification when something fails
@@ -19,8 +22,9 @@ Benefits from automating a building:
 - save time 
   * booking workplaces, conference rooms
   * looking for colleagues
+  * automatic time tracking
   * e.g. coffee machine, automatically adapts to your likings
-  * printers do not print until you are nearby, so that the printer is still available for others
+  * e.g. printers do not print until you are nearby, so that the printer is still available for others
 - save work
   * rooms that have not been used do not require cleaning that often
   * if not needed, e.g. toilet groups can be closed off 
@@ -37,4 +41,6 @@ Benefits from automating a home:
   * sleep quality at night
   * positive mood
 - save time
-  * e.g. coffee automatically turns on and prepares a coffee to your liking
+  * e.g. coffee machine automatically turns on and prepares a coffee to your liking
+  * e.g. automatically unlock door when you come home
+  * e.g. remotely turn on your oven
