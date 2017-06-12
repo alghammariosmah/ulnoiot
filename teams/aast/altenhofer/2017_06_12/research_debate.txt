@@ -28,20 +28,50 @@
 			* also you can spot out inefficient and huge powerconsuming devices, like fridges, and maybe replace them with newer models.
 			* some electical power providers have some kind of lower rates on non-peak usage times -> supply your devices during those times.
 
-
 	* Pro Statements:
 		- Smart thermostats worth some serious consideration. 
 		The premise is simple and compelling: smarter control of your heating, remote access and the promise of energy savings of 20-30%
 		- By side the smart thermostats also other stuff is able to be monitored. You can use some sensors and detect the devices of you home
 		which consume the most power, and maybe replace them with more efficient models.
 
-	* Con Statements:
-		- security issues, another instance of vulnerability. Attacker can use low secured devices like webcams, 
-		baby cams to get access to the network. --> Useage of the devices only in home network (LAN). Only one device
-		(router) has access to the internet, not more vulnerable than any other device.
-		- Cost. Some smart products can be fairly expensive.
-		- Learning. There may be some learning curve for non-tech savvy people.
-		- Reliability. Smart homes are reliant on your internet connection.
+# Contra Starting:
+	
+## Security
+ * we get another instance of vulnerability
+ * privacy 
+ * functionality over security
+ * smart homes rely on the internet
+## Costs and productivity
+ * most of the products are pretty expensive
+ * additional devices consume power as well
+ * no tech affine persons need support effort.
+## efficiency
+ * all the devices needs to setup and programmed properly to work efficience
+ * suming up of all connected devices the power consumption is not as good as expected.
+	
+# Con Statements:
+
+## Security
+ * security issues because we need another vulnerability. 
+ Attacker can use low secured devices like webcams, baby cams to get access to the network.
+ * privacy, you send some personal data over the internet. for example what do you eat,
+ when you have like a smart fridge who reorders goods automatically.
+ * scada OS which is used for energy systems and pretty prone for attacks.  
+ * most companies which create smart systems dont put much effort into security, functionality is in the forground.
+ * most of the functionality like remotely turning on and off lights, the AC or the heating relies on a internet connection,
+ so if your devices are not connected to the internet they are dump devices and cant be used in a smart way. 
+ Sending data on the internet may cause additional costs. some roaming fees as well, when remote controll stuff on vacation.
+## Costs and productivity
+ * most of the products are pretty expensive when buying them. you need a huge amount of devices to get usable smart features. 
+ for example the philipps hue starter pack, just to turn on lights over the network costs 73 euros on amazon.
+ * additional devices consume power as well. many sensors consume a lot of power, you need to setup your devices properly to get the
+ most out of it. most of the people are not able to setup and programm those devices so they consume more power than save it.
+ * no tech affine persons need technical support. if a company setup your system you need their support in an error case.
+## Efficiency
+ * For normal users its pretty error prone when setting up and program bigger home automation system. 
+ All the devices needs to setup and programmed properly to be used efficient. Every device which is not setup correctly is just another
+ device which consumes power over the whole day.
+ * Summing up of all connected devices and sensors the power consumption is not as good as expected.
 
 ### Links:
 	* http://freshome.com/home-automation-essential-energy-efficiency/
