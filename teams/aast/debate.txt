@@ -55,21 +55,20 @@
 ##Productivity
 Benefits from automating a building:
 - more comfortable working environment, (green buildings) score higher in:
-  * aesthetic appearance
-  * size of personal workspace
-  * noise from HVAC systems
-    + e.g. on days where only part of the staff is at work, the HVAC can kept at a minimum
-  * ventilation & temperature
+  * noise from HVAC(heat, ventilation and air conditioning) systems
+    + e.g. on days where only part of the staff is at work, the HVAC can be kept at a minimum
+  * ventilation & temperature: well being
   * workplace image
   (* lighting and room temperature can be adapted to individual likings)
 - reduce workload for building operations
   * parameters of the building can be adapted by individuals according to their needs.
   they do not need staff to change things.
-- fix errors faster
+- fix errors faster (monitoring)
   * building fully integrated, mistakes detected quickly
   * notification when something fails
 - use space more efficiently
   * ensure building is utilised floor by floor
+  * shared spaces automatically organized
 - save time 
   * booking workplaces, conference rooms
   * looking for colleagues
@@ -99,8 +98,8 @@ Benefits from automating a home:
 
 
 #Security
-- vulnerabilities = operating system
-- sending private info
+- vulnerabilities = every operating system is vulnerable
+- sending private info is what we do all the time with smartphones etc...
 - connection failure. 
 
 - safety against unexpected human/natural failures 
@@ -109,7 +108,7 @@ Benefits from automating a home:
 	* in case of flooding, use automated plumping sewers, or redirect the water flow to the sewers. 
 
 - security against criminals
-  * When a theif breaks in the house, sensitive motion detectors start firing alarms and sending instant notification to the homeowners. 
+  * When a thief breaks in the house, sensitive motion detectors start firing alarms and sending instant notification to the homeowners. 
   * cameras surveleinces can be used to monitor and detect movements.  
   * Automated lights in case of traveling, which simulates presence.
 
