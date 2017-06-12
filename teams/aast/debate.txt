@@ -98,7 +98,11 @@ Benefits from automating a home:
   * e.g. water your plants/feed pets
 
 
-##Security
+#Security
+- vulnerabilities = operating system
+- sending private info
+- connection failure. 
+
 - safety against unexpected human/natural failures 
 	* detecting fire or even smoke before fire with surveleinces or heat detectors. Thus, we can use automated water pumbers and fire extinguishers
 	 in the specific rooms. 
