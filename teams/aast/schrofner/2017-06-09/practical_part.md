@@ -1,7 +1,7 @@
 #Practical part
 Plugin pi, connect to strongest ap using password: internetofthings
 
-Open a terminal an use:
+Open a terminal and use:
 ssh pi@192.168.12.1
 
 Using the password: ulnoiot
@@ -46,3 +46,5 @@ To connect to the MQTT server on the raspberry pi, you can use "mqtt("192.168.12
 To load the functions to control the led shield use "import devkit1_2led3but"
 
 Finally use the "run" command so that the mqtt messages can be received
+
+To turn on an LED, use "mqtt_send test/red/set on"
