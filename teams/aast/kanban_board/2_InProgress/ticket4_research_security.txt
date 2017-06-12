@@ -3,7 +3,7 @@ Assigned: Sam
 Start: 2017.06.09 16:00
 Finished: date time
 
-Description: Reasearch for the debate in the topic Security and Safety:
+Description: Research for the debate in the topic Security and Safety:
 	* smart homes are well-known for their improved security.
 	* cameras -> send to smartphone
 	* automated lights, simulate you are at home when on vacation.

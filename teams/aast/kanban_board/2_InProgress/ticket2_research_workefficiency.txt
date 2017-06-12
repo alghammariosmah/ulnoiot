@@ -3,7 +3,7 @@ Assigned: Flo
 Start: 2017.06.09 16:00
 Finished: date time
 
-Description: Reasearch for the debate in the topic time, work efficiency, employee health:
+Description: Research for the debate in the topic time, work efficiency, employee health:
 	- can be used to reduce the amount of time required for work flows do stuff
 	- Save costs
 	- work more efficiently

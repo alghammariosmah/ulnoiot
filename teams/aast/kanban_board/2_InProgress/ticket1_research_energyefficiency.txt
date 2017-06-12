@@ -4,6 +4,6 @@ Start: 2017.06.09 16:00
 Finished: date time
 
 Description: Reasearch for the debate in the topic energy efficiency.
-	- Enviromentally freindly
-	- Thermostats for temp controll
+	- Environmentally friendly
+	- Thermostats for temp control
 	- Monitoring, cost savings.
