@@ -1,0 +1,25 @@
+11:30:
+
+cloning the SD card:
+	* sudo ./
+	* sudo ./rpt-clone sda // sda the sd card
+	* watch the video online
+
+
+Intro: Iot & H&B automation
+	* Internet of things (Iot) 
+	& Home and Building Automation H&B: security, privacy, protection, configurability, networking...etc.
+
+
+MQTT
+	* Machine to machine communication M2M. 
+		- Certification and Authentication. 
+		- Runs over TCP or any other stream-based protocol. 
+
+
+
+Build your own lock
+
+
+
+NFC
