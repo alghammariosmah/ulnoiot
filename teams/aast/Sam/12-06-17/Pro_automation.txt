@@ -1,8 +1,5 @@
 
-Researchers a Saarland University found that these systems allow criminals to gain insight into the behavioral patterns of homeowners especially when the homeowners were absent.
-3. the ability to view your home at all times. 
-4. If you have family members or roommates often home when you’re not, look for facial recognition capability, 
-to cut down on the number of unnecessary alerts you receive.
+
 
 Advantages
 1. Managing all of your home devices from one place. The convenience factor here is enormous. Being able to keep all of the technology in your home connected through one interface is a massive step forward for technology and home management. Theoretically, all you’ll have to do is learn how to use one app on your smartphone and tablet, and you’ll be able to tap into countless functions and devices throughout your home. This cuts way back on the learning curve for new users, makes it easier to access the functionality you truly want for your home.
@@ -30,4 +27,9 @@ Disadvantages
 - Learning. There may be some learning curve for non-tech savvy people.
 - Reliability. Smart homes are reliant on your internet connection.
 
+
+- Researchers a Saarland University found that these systems allow criminals to gain insight into the behavioral patterns of homeowners especially when the homeowners were absent.
+3. the ability to view your home at all times. 
+4. If you have family members or roommates often home when you’re not, look for facial recognition capability, 
+to cut down on the number of unnecessary alerts you receive.
 
