@@ -27,11 +27,19 @@
 		Depending on the climate you can save up to 150$ on your yearly bills just by programm those thermostats
 		right and use the heating and cooling in the most efficient way, by automate the thermostat program.
 
-	* Statements:
+	* Pro Statements:
 		- Smart thermostats worth some serious consideration. 
 		The premise is simple and compelling: smarter control of your heating, remote access and the promise of energy savings of 20-30%
 		- By side the smart thermostats also other stuff is able to be monitored. You can use some sensors and detect the devices of you home
 		which consume the most power, and maybe replace them with more efficient models.
+
+	* Con Statements:
+		- security issues, another instance of vulnerability. Attacker can use low secured devices like webcams, 
+		baby cams to get access to the network. --> Useage of the devices only in home network (LAN). Only one device
+		(router) has access to the internet, not more vulnerable than any other device.
+		- Cost. Some smart products can be fairly expensive.
+		- Learning. There may be some learning curve for non-tech savvy people.
+		- Reliability. Smart homes are reliant on your internet connection.
 
 ### Links:
 	* http://freshome.com/home-automation-essential-energy-efficiency/
