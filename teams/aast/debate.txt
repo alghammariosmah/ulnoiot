@@ -1,7 +1,39 @@
-#Debate
+#Introduction
 
-See 2017-06-10/debate.md for original quotes and links.
+##Energy efficiency
+- reduce energy wastage
+  * improving heating/cooling
+  * better lighting & shading
+- monitoring
+  * finding resource hogs
+- remote usage
+  * remotely turn on/off 
 
+##Security
+- safety against natural forces
+  * smoke/fire/water sensors
+- security against criminals
+  * motion detection
+  * cameras
+  * using light to simulate presence
+- monitoring your home
+  * children
+  * pets
+- facilitate the usage of security mechanisms
+  * facial recognition
+  * automatic door locks
+- price advantage over tradtional alarm systems
+
+##Productivity
+- better working environment
+- reducing work effort
+- improving error handling
+- optimised space usage
+- time savings
+
+#Arguments
+
+##Productivity
 Benefits from automating a building:
 - more comfortable working environment, (green buildings) score higher in:
   * aesthetic appearance
