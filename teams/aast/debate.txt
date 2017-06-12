@@ -32,6 +32,25 @@
 - time savings
 
 #Arguments
+##Energy efficiency
+- reduce energy wastage
+  * smart thermostats adapt to current environment
+    + adapt to persons present
+    + adapt to weather
+    + average household would save up to 150$ a year
+  * smart shading improves lighting and reduces cooling costs
+  * automatically switch off devices when you leave the house
+  * save 20-30% of energy
+- use energy more efficiently
+  * use energy when its cheapest (in the night)
+- monitoring
+  * retrieve precise information about your energy usage
+  * spot inefficient and powerconsuming devices
+- remote control
+  * switch off devices remotely that you might have forgotten
+    + e.g. switch off all lights at once, when you go to bed
+  * switch on devices to start up before you come home
+
 
 ##Productivity
 Benefits from automating a building:
