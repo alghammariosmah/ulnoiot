@@ -116,6 +116,23 @@ Alarm and fire safety systems
 #Monday 12. June 11:30
 wemos has not enough memory for certificate evaluation
 
+Starting using a smartlock
+-> connect relay to the wemosd1mini and the smartlock
+-> console to connect to wemosd1mini
+-> reset()
+-> start mqtt with mqtt("192.168.12.1", "lock")
+-> then import "relay" with import ulnoiot.shield.relay
+-> check available devices with "devices" command
+-> run() -> run driver
+-> test program with mqtt_send lock/relay/set on and off on Raspberry Pi 3
+
+
+
+
+
+
+
+
 
 
 

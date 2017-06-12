@@ -92,11 +92,11 @@
 	* wifi("iotempire-392bf9", "internetofthings") // new connect we flashed new firmwarew
 	* reset()	
 	* wip
-	* mqtt("192.186.12.1", "test") // ip of the raspberry pi not the apdater
-	* import ulnoiot.shield.devkit1_2led3but
-	* devices
+	* mqtt("192.186.12.1", "test") // ip of the raspberry pi not the apdater, connect raps pi to MQTT server
+	* import ulnoiot.shield.devkit1_2led3but // import the devkit driver script, where the commands are stated
+	* devices // show devices, red, yellow should be visible.
 	* run()
-	* rapberrypi: mqtt_send test/devicename/set on
+	* rapberrypi: start ulnoiot, mqtt_send test/yellow/set on
 
 ## 16:15 - 16:50 research for debate
 	* research and add bulletlist for the debate on thuesday
@@ -117,3 +117,48 @@
 ## 08:50 - 10:50 research for debate
 	* read across a few articles for energy efficiency topic
 	* read findings of my colleagues
+
+## 11:20 - 11:35 cloning pi sd cards
+	* login to pi. take a session
+	* goto sourcefolder // where rpi-clone is located
+	* sudo ./
+	* sudo ./rpi-clone sda // sda is the SD card name
+	* yes // confirm
+	* rootfs
+	* yes // confirm
+
+## 11:30 - 12:00 lecture
+	* IoT make everything communication with each other.
+	* Grid computing is just an old/outdated term for cloud computing.
+
+## 12:00 - 13:00 starting with the smartlock
+	* setup, wiring the smartlock
+	* console // enter wmos interface
+	* wifi("iotempire-392bf9", "internetofthings") // new connect we flashed new firmwarew
+	* reset()
+	* mqtt("192.168.12.1","servername") // start mqtt server on the pi.
+	* import ulnoiot.shield.relay	// import the relay.py driver script, where the commands are stated
+	* devices // check if the "relay" devices is connected
+	* run() // start the server
+	* on pi: mqtt_send severname/relay/set on
+	* we encoutered some problems: we couldnt communicate with the mqtt server and the pi.
+	* we needed to restart the pi and set everything up new. after the reboot it worked out.
+
+## 13:00 - 13:15 adding public key
+	* ssh-keygen.exe
+	* file name
+	* enter pi
+	* add ssh key by adding the pub key to: /home/pi/.ssh/authorized_keys
+
+## 13:15 - 14:40 NFC example
+	* setup, wiring the NFC reader
+	* start with the "install nfc" text
+
+## 15:00 - xx:xx 
+	* merge findings together
+	* finding con points to argue with
+	* 
+
+
+
+
