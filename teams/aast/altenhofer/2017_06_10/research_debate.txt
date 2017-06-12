@@ -1,36 +1,41 @@
 ### Environmentally friendly, increase energy efficiency, less costs:
 	* dim, turn off lights.
-		- walk out of the door and forget to turn off light? check via smartphone. There are some applications which allow
-		you to turn off all lights with a simple click on one button. This may be helpful when you go to bed and dont want
-		to check if the light a switched off in every room in the whole house.
+		- walk out of the door and forget to turn off light? check via smartphone, if so switch off remotely.
+		- There are some applications which allow you to turn off all lights with a simple click on one button. 
+		This may be helpful when you go to bed and dont want to check if the light are switched off in every room in the whole house.
 		
 	* Thermostats for controll temperature perfect. 
 		- most thermostats are already programmable nowadays, which is actual a home automation device.
-		- but how often are the schedules overriden or adapted?
+		- but how often are the schedules overriden or adapted by hand?
 		these thermostats in addition with some smart sensors will help you to cool/heat your flat
 		in the most efficient possible way. The sensors check the current temperature inside as well as outside and adapt
-		the temperature perfektly.
+		the temperature perfectly and automated.
 		- those smarthome tools are note only eco-savvy, they are also very easy on the wallet,  
 		Just use the smartphone or the computer to inform the smart thermostat or A/C that you coming home,
-		or that you will arrive later. the thermostat and A/C now can perfectly adapt the temperature in a cost
-		efficiant way. because it doesnt heat up or cool down your flat when it hasnt to.
+		or that you will arrive later. The thermostat and A/C now can perfectly adapt the temperature in a cost
+		efficiant way because it doesnt heat up or cool down your flat when it hasnt to.
 
 	* can all be controlled and monitored for optimal energy efficiency, cost savings.
-		- a variety of monitors can provide information of power usage of the plugged
-		items in the home.
+		- a variety of monitors can provide information of power usage of the plugged items in the home.
 		- you will get a precice information of the electricity usage of the the entire home.
-		- also you can spot out inefficient and huge powerconsuming devices, like fridges, 
-		and maybe replace them with newer models.
-		- also some electical power providers have some kind of lower rates on non-peak usage times.
+		- also you can spot out inefficient and huge powerconsuming devices, like fridges, and maybe replace them with newer models.
+		- some electical power providers have some kind of lower rates on non-peak usage times.
 		with the monitoring you can spot out this timeslots and supply the big usage items in these times.
 		- as in the article of smarthome.com a average household in the USA spends nearly 2000$ a year on
-		energy costs. 45% percent of this costs are on only for heating and cooling. As already mentioned most common
+		energy costs. 45% percent of this costs are only for heating and cooling. As already mentioned most common 
 		homes are already equiped with programmable thermostats. 
-		depending on the climate you can save up to 150$ on your yearly bills just by programm those thermostats
-		right and use the heating in the most efficient way.
+		Depending on the climate you can save up to 150$ on your yearly bills just by programm those thermostats
+		right and use the heating and cooling in the most efficient way, by automate the thermostat program.
+
+	* Statements:
+		- Smart thermostats worth some serious consideration. 
+		The premise is simple and compelling: smarter control of your heating, remote access and the promise of energy savings of 20-30%
+		- By side the smart thermostats also other stuff is able to be monitored. You can use some sensors and detect the devices of you home
+		which consume the most power, and maybe replace them with more efficient models.
 
 ### Links:
 	* http://freshome.com/home-automation-essential-energy-efficiency/
 	* http://www.yourhome.gov.au/energy/home-automation
 	* https://www.clickatell.com/articles/technology/the-pros-and-cons-of-smarthomes/
 	* http://www.smarthome.com/sc-save-energy-the-smarthome-way
+	* https://www.theguardian.com/environment/2015/jan/27/smart-thermostats-reviewed-which-can-save-you-most
