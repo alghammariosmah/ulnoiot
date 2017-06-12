@@ -96,3 +96,25 @@ Benefits from automating a home:
   * e.g. automatically unlock door when you come home
   * e.g. remotely turn on your oven
   * e.g. water your plants/feed pets
+
+
+##Security
+- safety against unexpected human/natural failures 
+	* detecting fire or even smoke before fire with surveleinces or heat detectors. Thus, we can use automated water pumbers and fire extinguishers
+	 in the specific rooms. 
+	* in case of flooding, use automated plumping sewers, or redirect the water flow to the sewers. 
+
+- security against criminals
+  * When a theif breaks in the house, sensitive motion detectors start firing alarms and sending instant notification to the homeowners. 
+  * cameras surveleinces can be used to monitor and detect movements.  
+  * Automated lights in case of traveling, which simulates presence.
+
+
+- monitoring your home
+  * children
+  * pets
+- facilitate the usage of security mechanisms
+  * In case relatives come to the house while you are not around, facial recognition can be used to certify home access for them.
+  * automatic door locks to limit home access for these people. 
+
+- price advantage over tradtional alarm systems
