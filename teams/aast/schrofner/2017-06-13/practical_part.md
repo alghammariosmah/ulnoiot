@@ -64,4 +64,35 @@ client.publish("nfc-id", data)
 
 Using those two scripts, you can unlock the lock with the hardcoded nfc tag and it will automatically lock after 5 seconds.
 
+To automatically prepare the wemos (load the lock shield, connect to the mqtt server and run), create a user.py with the following contents:
 
+```
+from ulnoiot import *
+import ulnoiot.shield.relay
+ 
+mqtt("192.168.12.1", "lock")
+run()
+```
+
+This will automatically be executed upon boot.
+
+To access the wemos from your (Linux) PC. You can use the picocom, for example.
+Just plug it into your pc and execute:
+picocom -b 115200 -l -r /dev/ttyUSB0
+
+Update the firmware, so that the mqtt messages work (use same workflow as in the past)
+
+To use the temperature sensor import the according shield with:
+import ulnoiot.shield.devkit1_ht
+
+You can then retrieve the temperature with
+devices["ht1"].temperature()
+
+Or the humidity with:
+devices["ht1"].temperature()
+
+Then, again, enter the wifi data, subscribe to mqtt with "mqtt("192.168.12.1", "temp")"
+and call run(). The shield will automatically retrieve the temperature and humidity and publish it to
+"temp/ht1/temperature" and "temp/ht1/humidity".
+
+You can then subscribe to the topic with an MQTT client.

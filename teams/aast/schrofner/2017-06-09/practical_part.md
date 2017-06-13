@@ -34,7 +34,7 @@ in our case: 192.168.12.18
 You can change the address by editing the "wifi_config.py" with "lineedit("wifi_config.py", 3)"
 
 "git pull" pulls the newest firmware changes onto the raspberry pi
-"firmware_download" downloads the newest firmware
+"download_firmware" downloads the newest firmware
 "fix_bin" to fix the binary
 "flash_esp8266" to flash the new firmware onto the wimos
 "deploy_wemosd1mini" to deploy the python scripts again
