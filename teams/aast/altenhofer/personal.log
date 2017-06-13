@@ -195,31 +195,58 @@
 	* client.publish("lockserver/relay/set/","on")
 
 ## 10:40 - 11:45 debate
-	#### Statement round
-	* contra. price, costs -> not everyone has the ability to install home automation, after years some parts break replace?
-		- every tech if smart or dump, needs support. if you gear your house with eg. thermostats, why not use a smart thermostat?
-	* contra. non tech affine persons cant use smart home systems
-		- i think it's in the hand of the companies to design the
-	* pro. every person can use home automation, the stuff is made to be used in a simple way.
-	* contra. privacy, information in the internet.
-		- google, you use a notebook (google.com), and use your smartphone anyways. why not use the smartphone in your network.
-	* contra. economicy, big companies instead of small family buisnesses(butchery, farmers)
-	* contra. security, unsave OS are used, functionality over security.
-	* pro. efficiency, remotly, find energy hogs
-	* pro. security, safty against natrual forces, or thievs(motion detect, thermal cams)
-	* pro. productivity, provides a better working enviroment, better usage of space(shared spaces, costs)
-	#### 1st. Topic Safety, Security and Privacy
-	* systems may be not secure? every OS is unsecure in a way, linux for example is unsecure in a way as well.
-	* private informations? privacy against convinience.
-	* hardware key is not hackable! fingerprints are reproduceable.
-		- you can lose your hardware key ofter equipped with tags!
-	#### 2st. Topic Efficiency, Costs
-	* smart theromostats, reduce the heating costs. smart shading reduce heating -> 20-30%
-	* you have maintenance costs.
-		- when heating/cooling is running all the time you have inefficient usage. 
-		- maintenance costs are with dump devices as well. 
-		so when you need a new system, why not install a smart device.
-	#### 3st. Big Players, combine differnet systems, interoperability.
-	* one system rules them all, give all informations to this company(amazon eco)
-		- small companies like loxone keep your data private(server is in home)
-	* differencial privacy (anynomise big data)
+	* the log is available in the 2017_06_13 debate.txt file
+
+## 11:45 - 14:30 nfc unlock example with another channel
+	* pip install paho-mqtt
+	* // create new python file (nfc-id publisher), copy Read.py
+	* //import mqtt lib into the file 
+	* import paho.mqtt.client as mqtt
+	* // create mqtt client and connect to the mqtt server in the file beginning
+	* client = mqtt.Client()
+	* client.connect("192.168.12.1")
+	* // sending mqtt messages with, instead of the "set on" operation
+	* data = str(uid[0])+..... // like the println from read.py
+	* // send data on the nfc-id channel, dont send the "set on" operation to the relay
+	* client.publish("nfc-id", data) 
+	***
+	* // create another script(controller/broker) which listens to the nfc-id channel
+	* import paho.mqtt.client as mqtt // import the mqtt pack
+	* // The callback for when the client receives a CONNACK response from the server.
+	* def on_connect(client, userdata, flags, rc):
+    	* keys = ["id of card", "id of 2nd card"]
+	* print("Connected with result code "+str(rc))
+	* // Subscribing in on_connect() means that if we lose the connection and
+    	* // reconnect then subscriptions will be renewed.
+    	* client.subscribe("nfc-id")
+	* // The callback for when a PUBLISH message is received from the server.
+	* def on_message(client, userdata, msg):
+    	* print(str(msg.payload))
+	* if (str(msg.payload) in keys:
+	* client.publish("lockserver/relay/set/","on")
+	* // create client object
+	* client = mqtt.Client()
+	* client.on_message = on_message
+	* client.on_connect = on_connect
+	* // connect to mqtt server
+	* client.connect("192.168.12.1")
+	* // subscribe to topic
+	* client.subscribe("nfc-id")
+	* // client should run in background
+	* client.loop_forever()
+	* // file is ready
+	* // create a starting script
+	* 
+
+## 14:30 - 15:30 fixing
+	* the rpi we are using (rpi 1b) supports a different kernel version. so the wifi interface wasnt able to start.
+	* TEMP1=$(uname --kernel-release | cut -d+ -f1) // will remove the + after the version name which causes the error.
+
+## 15:30 - 16:00 logging
+	* team and personal log
+
+
+
+
+
+
