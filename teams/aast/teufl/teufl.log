@@ -73,7 +73,7 @@ type "console" -> serial connection
 	3. wip -> shows wireless ip -> 192.168.12.18
 
 	* pull git repo for new firmware on Raspberry Pi 3
-	* firmware download -> download newest firmware
+	* download_firmware -> download newest firmware
 	* fix_bin -> binary fixes
 	* flash_esp8266 -> flashing
 	* again deploying
@@ -117,7 +117,7 @@ https://www.asmag.com/showpost/16499.aspx
 #Monday 12. June 11:30 - 14:35 [lecture]
 wemos has not enough memory for certificate evaluation
 
-## Starting using a smartlock
+## Start using smartlock
 	1. Connect relay to the wemosd1mini and the smartlock
 	2. Console to connect to wemosd1mini
 	3. reset()
@@ -144,3 +144,103 @@ wemos has not enough memory for certificate evaluation
 	* restructuring personal log
 	* updating personal log
 	* updating kanban board
+
+
+# Tuesday 13. June 8:50 - 12:05 and 13:00 - 16:15 [lecture]
+## Debate notes
+### Cons
+	* cost effiency -> hire company -> not everyone has the ability to build a system, 40 years that it will get profitable
+	* makes life much more complicated
+	* google knows the answer of people when using smartphones -> using for home automation 
+	* they are creating profiles of everyone
+	* economics -> kills small scale industries -> supermarkets
+	* security -> no one cares about that
+	* not so complex to raise false alarms
+	* save 100€ per year -> not much -> tooks 10 years but costs maintainance
+
+### Pros
+	* also not technical persons can use home and bulding automation systems
+	* safety -> able to control and sense everything -> emergency
+	* connect to your neighborhood
+	* time savings
+	* energy savings -> reduce energy wastage
+	* save money -> smart shading -> 20% - 30% saving of energy
+	* usage -> monitoring
+	
+
+## Setting up python scripts to lock/unlock door lock with NFC
+### Python NFC script
+	1. Install python mqtt library with cmmand "pip install paho-mqtt" on Raspberry Pi 3
+	2. Copy python script read.py from home/pi/ulnoiot/pi.nfc/MFRC522-python and rename it to nfc-lock.py
+	3. Import mqtt library (import paho.mqtt.client as mqtt)
+	4. Add code to the file to connect to the mqtt server and publish the command to unlock the door lock
+	5. The added lines are "client = mqtt.Client()", "client.connect("192.168.12.1")" and "client.publish("lock/relay/set", "on")"
+	
+On the wemosd1mini subscribe on the mqtt server, import the driver and start running it
+
+### Python brocker script
+Then second script is a python brocker script which subscribes in the nfc-id topic and listens for ids. When ids
+arrive they will be checked if they are valid ones. If they are valid the door lock will be unlocked and then automatically 
+locked again after 5 seconds
+
+```python
+	import paho.mqtt.client as mqtt
+	from threading import Timer
+
+	authorized_keys = ["b'102-247-124-65'"]
+
+	def on_connect(client, userdata, flags, rc):
+        	print("Connected with result code "+str(rc))
+        	client.subscribe("nfc-id")
+
+	def lock():
+        	client.publish("lock/relay/set", "off")
+
+	def unlock():
+        	client.publish("lock/relay/set", "on")
+
+
+	def on_message(client, userdata, msg):
+        	print("checking if key: " + str(authorized_keys))
+        	print("received key: " + str(msg.payload))
+        	if str(msg.payload) in authorized_keys:
+                	print("valid key detected")
+                	unlock()
+                	timer = Timer(5.0, lock)
+                	timer.start()
+
+
+	client = mqtt.Client()
+	client.on_connect = on_connect
+	client.on_message = on_message
+
+	client.connect("192.168.12.1")
+
+	client.loop_forever()
+```
+
+### wemosd1mini start script
+Create a user.py script with the follwoing lines of code:
+```
+from ulnoiot import *
+import ulnoiot.shield.relay
+
+mqtt("192.168.12.1", "lock")
+run()
+```
+
+## Serial connection from the laptop or pc
+Therfore, the program minicom or picocom can be used with the command for example "picocom -b 115200 -l -r /dev/ttyUSB0"
+
+## Temperature sensor
+	1. Connect temperature sensor shield to wemosd1mini
+	2. Download new firmware because there was a bug in the script
+	3. Then flash and deploy wemosd1mini using the same steps as written in log on Friday 9. June
+	4. Import driver with "import ulnoiot.shield.devkit1_ht"
+	5. Temperature and humidity can be read out with the commands "devices["ht1"].temperature()" and "devices["ht1"].humidity()"
+	6. Subscribe mqtt with command "mqtt("192.168.12.1", "temp")" and run it with "run()"
+	7. The temperature and humidity will the automatically published to "temp/ht1/temperature" and "temp/ht1/temperature"
+
+# Tuesday 13. June 21:00 - 22:00
+	* updating team log with movie compilation, debate notes and practical part descriptions
+	* updating personal log
