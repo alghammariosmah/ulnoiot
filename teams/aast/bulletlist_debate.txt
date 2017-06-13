@@ -5,7 +5,7 @@
 	* Save costs
 	* work more efficiently
 
-- (Gertsch) Security and Safety:
+- (Gertsch|Sam) Security and Safety:
 	* smart homes are well-known for their improved security.
 	* cameras -> send to smartphone
 	* automated lights, simulate you are at home when on vacation.
@@ -14,10 +14,6 @@
 	* dim lights.
 	* Thermostats to control air conditioning perfectly. 
 	* can all be controlled for optimal energy efficiency.
-
-- Customization. You can include as many or as few of these products as you choose.
-- Ease. It's quick and simple to install these systems.
-- Convenience. All of your products will be programmed to your needs.
 
 ### Links:
 

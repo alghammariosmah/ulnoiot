@@ -139,9 +139,9 @@
 	* mqtt("192.168.12.1","servername") // start mqtt server on the pi.
 	* import ulnoiot.shield.relay	// import the relay.py driver script, where the commands are stated
 	* devices // check if the "relay" devices is connected
-	* 
+	* sequence is important
 	* run() // start the server
-	* on pi: mqtt_send severname/relay/set on
+	* on pi: mqtt_send servername/relay/set on
 	* we encoutered some problems: we couldnt communicate with the mqtt server and the pi.
 	* we needed to restart the pi and set everything up new. after the reboot it worked out.
 
@@ -164,8 +164,62 @@
 ## 08:50 - 09:15 setup the pi
 	* wiring, importing, testing functionality leds
 
-## 09:15 - xx:xx 
+## 09:15 - 09:30 prepare pi for NFC example
+	* see google doc sheet to install nfc library on rpi
+	https://drive.google.com/drive/folders/0B8HG4tKItRBab2hEZlN1Mzd5X2s
+	* activate spi in raspi-config
+		- sudo raspi-config
+		- 5 interfacing options -> enter
+		- P4 Spi -> enter
+		- Yes -> enter
+		- Ok -> enter
+	* keep going with the doc sheet... 
+	* ... after running Read.py NFC tags should be readable (when NFC hardware is setup corrently)		
 
+## 09:30 - 10:40 nfc unlock example
+	* wifi("iotempire-392bf9", "internetofthings") // new connect we flashed new firmwarew
+	* reset()
+	* mqtt("192.168.12.1","lockserver") // start mqtt server on the pi.
+	* import ulnoiot.shield.relay	// import the relay.py driver script, where the commands are stated
+	* //use startup scipt to get rid of the wmos/shield configs
+	* //nfc library has to be installed
+	* //install python mqqt library 
+	* pip install paho-mqtt
+	* // create new python file, copy Read.py
+	* //import mqtt lib into the file 
+	* import paho.mqtt.client as mqtt
+	* // create mqtt client and connect to the mqtt server in the file beginning
+	* client = mqtt.Client()
+	* client.connect("192.168.12.1")
+	* sending mqtt messages with:
+	* client.publish("lockserver/relay/set/","on")
 
-
-
+## 10:40 - 11:45 debate
+	#### Statement round
+	* contra. price, costs -> not everyone has the ability to install home automation, after years some parts break replace?
+		- every tech if smart or dump, needs support. if you gear your house with eg. thermostats, why not use a smart thermostat?
+	* contra. non tech affine persons cant use smart home systems
+		- i think it's in the hand of the companies to design the
+	* pro. every person can use home automation, the stuff is made to be used in a simple way.
+	* contra. privacy, information in the internet.
+		- google, you use a notebook (google.com), and use your smartphone anyways. why not use the smartphone in your network.
+	* contra. economicy, big companies instead of small family buisnesses(butchery, farmers)
+	* contra. security, unsave OS are used, functionality over security.
+	* pro. efficiency, remotly, find energy hogs
+	* pro. security, safty against natrual forces, or thievs(motion detect, thermal cams)
+	* pro. productivity, provides a better working enviroment, better usage of space(shared spaces, costs)
+	#### 1st. Topic Safety, Security and Privacy
+	* systems may be not secure? every OS is unsecure in a way, linux for example is unsecure in a way as well.
+	* private informations? privacy against convinience.
+	* hardware key is not hackable! fingerprints are reproduceable.
+		- you can lose your hardware key ofter equipped with tags!
+	#### 2st. Topic Efficiency, Costs
+	* smart theromostats, reduce the heating costs. smart shading reduce heating -> 20-30%
+	* you have maintenance costs.
+		- when heating/cooling is running all the time you have inefficient usage. 
+		- maintenance costs are with dump devices as well. 
+		so when you need a new system, why not install a smart device.
+	#### 3st. Big Players, combine differnet systems, interoperability.
+	* one system rules them all, give all informations to this company(amazon eco)
+		- small companies like loxone keep your data private(server is in home)
+	* differencial privacy (anynomise big data)
