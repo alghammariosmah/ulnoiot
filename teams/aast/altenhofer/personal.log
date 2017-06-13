@@ -139,6 +139,7 @@
 	* mqtt("192.168.12.1","servername") // start mqtt server on the pi.
 	* import ulnoiot.shield.relay	// import the relay.py driver script, where the commands are stated
 	* devices // check if the "relay" devices is connected
+	* 
 	* run() // start the server
 	* on pi: mqtt_send severname/relay/set on
 	* we encoutered some problems: we couldnt communicate with the mqtt server and the pi.
@@ -154,10 +155,16 @@
 	* setup, wiring the NFC reader
 	* start with the "install nfc" text
 
-## 15:00 - xx:xx research for debate
+## 15:00 - 18:00 research for debate
 	* merge findings together
 	* finding con points to argue with
-	* 
+
+# 2017_06_13:
+
+## 08:50 - 09:15 setup the pi
+	* wiring, importing, testing functionality leds
+
+## 09:15 - xx:xx 
 
 
 
