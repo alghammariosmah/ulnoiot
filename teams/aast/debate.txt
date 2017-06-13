@@ -9,7 +9,7 @@
 - remote usage
   * remotely turn on/off 
 
-##Security
+##Safety
 - safety against natural forces
   * smoke/fire/water sensors
 - security against criminals
