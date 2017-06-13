@@ -39,7 +39,13 @@ You can change the address by editing the "wifi_config.py" with "lineedit("wifi_
 "flash_esp8266" to flash the new firmware onto the wimos
 "deploy_wemosd1mini" to deploy the python scripts again
 
+To turn on the onboard led, first initialise it with "onboardled.init(Pin.OUT)"
+
+Then to turn it on and off use "onboardled.on()" and "onboardled.off()"
+
 "reset" should be executed before connecting to the mqtt server
+
+IMPORTANT: first connect to the mqtt server, before importing. otherwise it wouldn't work for us. 
 
 To connect to the MQTT server on the raspberry pi, you can use "mqtt("192.168.12.1","test")"
 
