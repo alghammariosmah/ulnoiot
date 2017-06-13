@@ -1,0 +1,48 @@
+# install nfc library on raspberry pi
+
+# login as user pi
+
+# get dependencies (last two are just for later convinience)
+sudo apt install python-dev build-essential python-rpi virtualenv mc aptitude
+
+# get external libraries
+mkdir pi-nfc
+cd pi-nfc
+git clone https://github.com/mxgxw/MFRC522-python
+git clone https://github.com/lthiery/SPI-Py
+
+# create virtual environment
+virtualenv --system-site-packages .
+
+# enter virtual environment
+. bin/activate
+
+# build and install spi layer (make sure to also activate spi in sudo raspi-config!)
+cd SPI-Py/
+python setup.py install
+
+# try to read tags
+cd ../MFRC522-python
+python Read.py
+
+############
+Remember that you have to activate the environment before you run a python script.
+If you want to build a script which does this automatically, create somethign like the
+following:
+
+=== start in environment ====
+#!/bin/bash
+
+# find directory of this script
+dir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+cd "$dir" # go there
+
+# assume that the activation script is at ../bin/activate
+. ../bin/activate
+
+# execute my python program (change myscript to your script name)
+python myscript.py
+=============================
+after creating this file on the pi, make it executable with
+chmod a+x envstart.py # make sure to adapt name to environment script name
+
