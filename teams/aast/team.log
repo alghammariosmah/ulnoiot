@@ -236,7 +236,7 @@ it worked on Microsoft's Edge browser on Windows.
 
 On the wemosd1mini subscribe on the mqtt server, import the driver and start running it.
 
-### Python brocker script
+### Python broker script
 Then second script is a python brocker script which subscribes in the nfc-id topic and listens for ids. When ids
 arrive they will be checked if they are valid ones. If they are valid the door lock will be unlocked and then automatically
 locked again after 5 seconds.
