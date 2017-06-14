@@ -177,8 +177,7 @@ Spend so much time programming a task perfectly.
 	client.loop_forever() 
 
 
-	
-
+	* Run the Controller on pi , and the publisher on the virtual environment. 
 
 
 ## Fixing different pi versions:
@@ -187,5 +186,83 @@ Spend so much time programming a task perfectly.
 
 
 
+
+## X10 brief description:
+	* X10 is a communication protocol for electronic devices used for home automation. 
+	* It uses power line wiring for signaling and control. These signals are represented as digital information In a radio format frequencies. 
+	* Hardware support:
+		1- Device Modules:
+		Depending on the load that is to be controlled, different modules must be used. 
+			- Incandescent lamp : Triac-based lamp module or wall switch 
+			- Fluorescent lamps: appliance module
+			- High – intensity discharge lamps: appliance module
+		switch modules offer a feature called local dimming.  on/off control with no possibility of locally dimming the controlled lamp. However, appliance module is an automatic mode. For instance, if the module is switched off, operating the power switch on the lamp or appliance will cause the module to turn on
+		There are sensor modules that sense and report temperature, light, infra-red, motion, or contact openings and closures. Device modules include thermostats, audible alarms and controllers for low voltage switches.
+		2- Controllers:
+		X10 controllers range from extremely simple to very sophisticated.
+		The simplest controllers are:
+			- Unit 1 on/off
+			- Unit 2 on/off
+			- Unit 3 on/off
+			- Unit 4 on/off
+			- Brighten/dim (last selected unit)
+			- All lights on/all units off
+		3- Bridges:
+		ioBridge can be used to translate the X10 protocol to a web service API via the X10 PSC04 Powerline Interface Module.
+		The magDomus home controller from magnocomp allows interconnection and inter-operation between most home automation technologies.
+
+# Presentations:
+	#Canbus
+		- automatice bus syste, relaible protocol in harsh conditions,uses OSI model. 
+		- Transmission is a differential transmission. 
+		- CRC for data protection though errors can be detected. 
+		- Real time communication, 120 us per frame. 
+	# SPI
+		- dev by motorola
+		- Applications: camera, wifi modules..etc
+		- Extremely simple
+		- mo error checking. 
+		- Archit: 2 types: standard and ...
+	# ZigBee
+		- for control and sensor networks.
+		- active and passive state. low data rate, low power consumption. 
+		- Devies: FFD, RFD, Beacon, Non-Beacon
+	# Z-wave
+		- Doesn't much power to operate.
+		- Freq range: 1 GHz
+		- Data rates up to 100 kbps and supports encryption
+		- Communication in layer 6.
+	# 1-wire
+		- Bidirectional, half duplix, serial protocol.
+		- Master/ Slave
+		- Usage: temp, sensors, memory, authentication, Battery.
+		- Modes, standard which is 16 kbps, and Overdrive which is 8 kbps
+		- Master can be a PC, and the slaves are the devices. 
+	# I2C
+		- Normal mode 100 kbit/s
+		- Fast mode 400 Kbit/s
+		- Master/slave concept
+		- Applications: low-speed ADCs, DACs, Monitors, Displays, Sensors, Wemos.
+	# KNXL	
+		- OSI baed communication protocol. 
+		- It defines physical communication: twisted paor wiring, power line networking, Radio, Infrared, and Ethernet.
+		- 2 twisted pairs for transmission. 
+	# RS232 / RS422 / RS485 / DMX
+		- Serial communication. 
+		- RS232: transmission speed 256 kbps, it defines interface characteristics, pin identification, doesn't define encoding.
+		- RS 422: a new version. Uses differential signaling. more relaibale. allows full-duplex communication.
+		- RS 485: the successor of the previous one. Electrical signlaing. hald to full duplex with collision detection.
+		- DMX 512: standard digital communication. mostly used to control stage lighting/fog machines. asynchronous serial transmission. 
+		- Transmission speed 250 kbps. 
+		
+		
+
+
+
+
+
+
+
+	
 
 
