@@ -166,7 +166,13 @@ wemos has not enough memory for certificate evaluation
 	* energy savings -> reduce energy wastage
 	* save money -> smart shading -> 20% - 30% saving of energy
 	* usage -> monitoring
-	
+
+### Questions
+	* You said that cameras can produce false alarms -> but better 1 or two false alarms than your home is empty after vacation
+	* Comfort, price? Comfort is more important tan price -> years ago we have no smartphones but now a lot of people bye a 700€
+	  iPhone every year
+	* Everything is hackable? -> nothing is 100% safe, you also will do trips to other countries altough there were some terrorist
+	  attacks or not?	
 
 ## Setting up python scripts to lock/unlock door lock with NFC
 ### Python NFC script

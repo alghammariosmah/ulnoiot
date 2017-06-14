@@ -297,3 +297,8 @@ Therfore, the program minicom or picocom can be used with the command for exampl
         5. Temperature and humidity can be read out with the commands "devices["ht1"].temperature()" and "devices["ht1"].humidity()"
         6. Subscribe mqtt with command "mqtt("192.168.12.1", "temp")" and run it with "run()"
         7. The temperature and humidity will the automatically published to "temp/ht1/temperature" and "temp/ht1/temperature"
+
+## Display sensor
+	1. Connect display shield to wemosd1mini
+	2. Import driver with "import ulnoiot.shield.devkit1_display"
+	3. Displays the current ip and the ulnoiot path
