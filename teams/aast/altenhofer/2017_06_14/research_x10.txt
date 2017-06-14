@@ -29,3 +29,5 @@
 * One-way devices: only receive commands and do not ACK their status
 * Two-way devices: ACK their status to the network. More expensive
 
+https://en.wikipedia.org/wiki/X10_(industry_standard)
+

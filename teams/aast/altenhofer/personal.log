@@ -157,7 +157,8 @@
 
 ## 15:00 - 18:00 research for debate
 	* merge findings together
-	* finding con points to argue with
+	* fi
+ding con points to argue with
 
 # 2017_06_13:
 
@@ -200,6 +201,7 @@
 ## 11:45 - 14:30 nfc unlock example with another channel
 	* pip install paho-mqtt
 	* // create new python file (nfc-id publisher), copy Read.py
+	* emacs Read.py, ctrl+x ctrl+w Name the file.
 	* //import mqtt lib into the file 
 	* import paho.mqtt.client as mqtt
 	* // create mqtt client and connect to the mqtt server in the file beginning
@@ -236,14 +238,107 @@
 	* client.loop_forever()
 	* // file is ready
 	* // create a starting script
-	* 
 
 ## 14:30 - 15:30 fixing
 	* the rpi we are using (rpi 1b) supports a different kernel version. so the wifi interface wasnt able to start.
-	* TEMP1=$(uname --kernel-release | cut -d+ -f1) // will remove the + after the version name which causes the error.
+	* TEMP1=$(uname --kernel-release | cut -d+ -f1) // will remove the + after the version number, which caused the error.
 
 ## 15:30 - 16:00 logging
 	* team and personal log
+
+# 2017_06_14
+
+## 08:50 - 10:00 reproduced the NFC publisher/controller example
+	* we got the new pi
+	* set it up, installed python on the virtual enviroment
+	* reproduced the python scripts
+	* run, test
+
+## 10:00 - 10:45 temperature sensor
+	* wiring
+	* wifi("iotempire-sam", "internetofthings")
+	* reset()
+	* mqtt("192.168.12.1","tempserver") // start mqtt server on the pi.
+	* import ulnoiot.shield.devkit1_ht	// import the relay.py driver script, where the commands are stated
+	* devices
+	* devices["ht1"].temperature() // temp is now being published
+	* run()
+	* on pi: mqtt_send tempserver/ht1/temperature // will print the temp
+
+## 10:45 - 11:00 lecture
+	* introduction into "my friends house"
+	* selection of bus&protocoll topics
+	
+## 11:00 - 11:40 research on X10
+	* research the protocol
+	* setup a presentation
+	* see in research_x10.txt
+
+## 11:40 - 12:00 note for talks
+	* Canbus
+		+ connect ECUs eg in vehicles
+		+ producer / consumer system (mqtt)
+		+ differential transmission(more robust)
+		+ CRC data protection, AKC/NACK from receiver
+		+ CSMA/CA priority wins when CA detects a collision
+	* SPI
+		+ Serial Peripheral Interface
+		+ applications: SD cards, LCD display
+		+ simple, higher throuput than I²C
+		+ only short distances
+		+ master + multiple slaves
+
+## 13:00 - 14:25 note for talks round 2
+	* X10
+		+ own talk
+		+ informations at research_x10.txt
+	* zigbee
+		+ standard for control and sensor networks by zigbee alliance
+		+ aims low power consumption, low data rate
+		+ topology with coordinator, routers and end devices
+		+ end devices: full function devices, reduced function devices, beacon and non-beacon
+		+ philipps HUE runs on zigbee standard
+	* z-wave
+		+ new standard 2008
+		+ wireless to control and monitor devices
+		+ low powered RF co. technology supports mesh networks
+		+ supports encryption AES128
+		+ OSI layer 6 communication backwards capability
+		+ most used wireless solution, interoperability
+	* 1-wire	
+		+ bidirectional half duplex serial protocol
+		+ master multi slave prinziple
+		+ usage: temp sensors, timers.
+		+ can run in parasitic mode (inserted in the cable)
+		+ difference to NFC: it needs physical connection, no air gap
+		+ normal 16.3kbps, 60µs, overdrive was added later
+		+ only 1 wire is needed between the devices(+ 1 wire for GND)
+	* I²C
+		+ different versions normal mode 100kbit/s, fast mode 400kbit/s
+		+ version 4.0 (2012) ultra fast mode 5Mbit/s
+		+ operaion voltage is between +3.3v and 5V
+		+ multi master - multi slave concept
+		+ master to master communication -> one acts as slave
+		+ hardware internally communicaion, low speed
+	* KNX
+		+ OSI- based network commmunicatino protocol for building automation
+		+ combined protocol of EIB, BatiBUS and EHS
+		+ 16 bit address space with 65536 max nodes
+		+ divided into lines 256 devices each
+		+ 15 lines can be combined with 1 line to the backbone
+		+ 2 twisted pair cables only one is used for communication
+	* RS232, RS422, RS485, DMX512
+		+ RS232, RS422: was used in commercial PC sector, USB took over
+		+ RS232: 25 pins 256kbps witn max length of 15 meters, full duplex
+		+ RS422: added differential signaling makes it more reliable, 10Mbit/s, full duplex
+		+ RS485: electrical signaling is balanced(-5v and +5v, 0v is in the middle and helds no data)
+		multipoint systems are supported, half or full duplex
+		+ DMX512: digital communication, used for stage lighting, fog machines, 
+		8 data + 2 stop bits, 250kbps up to 450meter
+		Controller -> Slave -> Slave -> terminator(120Ohm resistor)
+
+## 14:25 - xx:xx build simulator
+		
 
 
 
