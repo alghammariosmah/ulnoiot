@@ -1,0 +1,268 @@
+##Personal background
+who are you? why studying mobile computing?
+I am Osamah Al-Ghammari, A computer engireering bachelor graduate and ENI master student. 
+
+what do you expect from h&b? 
+Learning new hardware and some software skills.
+
+if you were a team of 4 persons what would you bring to the table?
+good at SSH, Linux, programming langauges. 
+Spend so much time programming a task perfectly.
+
+
+##Movies
+#Scenarios and application domains:
+1. Remote controlling.
+2. Intelligent network and security. 
+
+#Techs:
+1. Internet network
+2. Local Network + Internet network , mobile app
+
+#Feasibility:
+- Is it doable?
+	1. Yes.
+	2. Yes.
+- What not?
+- When? 
+	1. Can be implemented currently.
+	2. The same
+
+#Weirdness/Craziness:
+1. Weird. 
+2. Crazy. 
+
+
+
+
+## Connecting to pi zero:
+
+	* Wifi name:
+	* iotempire-392bf9
+	* password:internetofthings
+	* Host Name or IP address:pi@192.168.12.1
+	* user: pi
+	* Password: ulnoiot
+	* connect to ulnoiot option which is 2
+	
+
+
+
+
+## Connecting Wmos to pi zero for:
+	* on the command line type:
+		flash_wemosd1mini
+	* First we flash and then we deploy. 
+		deploy_wemosd1mini
+		console 
+	* then we will be in the device.
+	>>>
+
+## Led on/off conf:
+	* help("wifi")wewe
+	* wip
+	* onboardled.init(Pin.OUT) 
+	* onboardled.on()  / off()
+
+## updating wifi
+	* on the pi interface -> git pull -> download_firmware -> 
+	* fix_bin
+	* flash_ESP8266
+	* deploy_wmosd1wmini
+	* console
+	* wifi("iotempire-sam", "internetofthings") 
+	* reset()	
+	* wip
+	* mqtt("192.186.12.1", "test") // ip of the raspberry pi 
+	* import ulnoiot.shield.devkit1_2led3but //  script where the commands Red/Yellow are stated
+	* devices 
+	* run()
+	* rapberrypi: start ulnoiot, mqtt_send test/yellow/set on
+
+
+
+## Connecting to the pi device from Web Repl website:
+	* http://micropython.org/webrepl/
+	* wip on command line to extract the IP address
+	* // We can edit and use pi through this website
+
+## Some Frameware on ulnoiot bash // Repeated:
+	* git gui
+	* git pull
+	* download_firmware
+	* fix_bin
+	* flash_esp82666
+	* type on the website ws://192.168.12.135:8266/  Password: ulnoiot
+	* You are logged in. 
+
+
+## Setting up the lock:
+	- Console side:
+	* make sure that you have an IP address (wip)for setting it wifi("wifi name","password") 
+	* change directory to ulnioit/Sheild
+	* the file is located in relay.py
+	* reset()
+	* mqtt("192.168.12.1", "Servername")
+	* import ulnoiot.shield.relay
+	* devices // check if relay exists.
+	* run()
+	- Switch to the pi:
+	* mqtt_send Servername/relay/set on // or off
+
+## adding public key from bash kernel
+	* ssh-keygen.exe
+	* cd /.shh
+	* // extract the public key from the file
+	* enter pi
+	* add ssh key by adding the pub key to: /home/pi/.ssh/authorized_keys
+
+## preparing pi for NFC 
+	* Check NFC sheet on google drive to install nfc library on pi
+	https://drive.google.com/drive/folders/0B8HG4tKItRBab2hEZlN1Mzd5X2s
+	* Before we install python, we have to activate spi in raspi-config
+		- sudo raspi-config
+		- 5 interfacing options -> enter
+		- P4 Spi -> enter
+		- Yes -> enter
+		- Ok -> enter
+	* after running Read.py NFC tags should be readable (when NFC hardware is setup corrently)		
+
+
+## Connecting the NFC to the lock:
+	* // Create a copy for the python code Read.Py , We called it NFCPublisher.py
+	* // Open the copied file and edit the file:
+		- // Add the following codes:
+		  import paho.mqtt.client as mqtt
+
+		  client = mqtt.Client() #create mqtt client and connect to the mqtt server
+		  client.connect("192.168.12.1")
+
+		- // Then on the while loop:
+    		# If we have the UID, continue
+    		if status == MIFAREReader.MI_OK:
+        		data = str(uid[0])+"-"+str(uid[1])+"-"+str(uid[2])+"-"+str(uid[3])
+        		client.publish("nfc-id",data) # we save the ID in a global publisher to use it on NFCController
+			#send data on the nfc-id channel, dont send the "set on" operation to the relay
+
+	* // Now Create NFCController with the following code taken from https://pypi.python.org/pypi/paho-mqtt/1.1#network-loop
+	
+		
+	import paho.mqtt.client as mqtt
+	from threading import Timer
+
+	keys = ["b'102-247-124-65'"] # the Card ID 
+
+	def on_connect(client, userdata, flags, rc):
+	    print("connected!")
+	    client.subscribe("nfc-id") # we saved the read card ID in nfc-id
+
+	def lock():
+	    client.publish("lockserver/relay/set", "off")
+
+
+	def unlock():
+	    client.publish("lockserver/relay/set", "on")
+
+	def on_message(client, userdata, msg):
+	    print("received key: "+ str(msg.payload)) # the saved nfc-id is here
+	    if str(msg.payload) in keys: # if it matches the Card ID, open it
+	        print("UNLOCK!")
+	        unlock()
+	        timer = Timer(5.0, lock)
+	        timer.start()
+	client = mqtt.Client()
+	client.on_connect = on_connect
+	client.on_message = on_message
+	client.connect("192.168.12.1")
+	client.loop_forever() 
+
+
+	* Run the Controller on pi , and the publisher on the virtual environment. 
+
+
+## Fixing different pi versions:
+	* the rpi we are using (rpi 1b) supports a different kernel version. so the wifi interface wasnt able to start.
+	* TEMP1=$(uname --kernel-release | cut -d+ -f1) // will remove the + after the version name which causes the error.
+
+
+
+
+## X10 brief description:
+	* X10 is a communication protocol for electronic devices used for home automation. 
+	* It uses power line wiring for signaling and control. These signals are represented as digital information In a radio format frequencies. 
+	* Hardware support:
+		1- Device Modules:
+		Depending on the load that is to be controlled, different modules must be used. 
+			- Incandescent lamp : Triac-based lamp module or wall switch 
+			- Fluorescent lamps: appliance module
+			- High – intensity discharge lamps: appliance module
+		switch modules offer a feature called local dimming.  on/off control with no possibility of locally dimming the controlled lamp. However, appliance module is an automatic mode. For instance, if the module is switched off, operating the power switch on the lamp or appliance will cause the module to turn on
+		There are sensor modules that sense and report temperature, light, infra-red, motion, or contact openings and closures. Device modules include thermostats, audible alarms and controllers for low voltage switches.
+		2- Controllers:
+		X10 controllers range from extremely simple to very sophisticated.
+		The simplest controllers are:
+			- Unit 1 on/off
+			- Unit 2 on/off
+			- Unit 3 on/off
+			- Unit 4 on/off
+			- Brighten/dim (last selected unit)
+			- All lights on/all units off
+		3- Bridges:
+		ioBridge can be used to translate the X10 protocol to a web service API via the X10 PSC04 Powerline Interface Module.
+		The magDomus home controller from magnocomp allows interconnection and inter-operation between most home automation technologies.
+
+# Presentations:
+	#Canbus
+		- automatice bus syste, relaible protocol in harsh conditions,uses OSI model. 
+		- Transmission is a differential transmission. 
+		- CRC for data protection though errors can be detected. 
+		- Real time communication, 120 us per frame. 
+	# SPI
+		- dev by motorola
+		- Applications: camera, wifi modules..etc
+		- Extremely simple
+		- mo error checking. 
+		- Archit: 2 types: standard and ...
+	# ZigBee
+		- for control and sensor networks.
+		- active and passive state. low data rate, low power consumption. 
+		- Devies: FFD, RFD, Beacon, Non-Beacon
+	# Z-wave
+		- Doesn't much power to operate.
+		- Freq range: 1 GHz
+		- Data rates up to 100 kbps and supports encryption
+		- Communication in layer 6.
+	# 1-wire
+		- Bidirectional, half duplix, serial protocol.
+		- Master/ Slave
+		- Usage: temp, sensors, memory, authentication, Battery.
+		- Modes, standard which is 16 kbps, and Overdrive which is 8 kbps
+		- Master can be a PC, and the slaves are the devices. 
+	# I2C
+		- Normal mode 100 kbit/s
+		- Fast mode 400 Kbit/s
+		- Master/slave concept
+		- Applications: low-speed ADCs, DACs, Monitors, Displays, Sensors, Wemos.
+	# KNXL	
+		- OSI baed communication protocol. 
+		- It defines physical communication: twisted paor wiring, power line networking, Radio, Infrared, and Ethernet.
+		- 2 twisted pairs for transmission. 
+	# RS232 / RS422 / RS485 / DMX
+		- Serial communication. 
+		- RS232: transmission speed 256 kbps, it defines interface characteristics, pin identification, doesn't define encoding.
+		- RS 422: a new version. Uses differential signaling. more relaibale. allows full-duplex communication.
+		- RS 485: the successor of the previous one. Electrical signlaing. hald to full duplex with collision detection.
+		- DMX 512: standard digital communication. mostly used to control stage lighting/fog machines. asynchronous serial transmission. 
+		- Transmission speed 250 kbps. 
+		
+		
+
+
+
+
+
+
+
+	
+
+

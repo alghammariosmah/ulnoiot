@@ -1,0 +1,33 @@
+# x10 industry standard
+
+## Introduction
+* home automation communication protocol
+* it uses power line wiring for signaling and control
+* short radio frequency bursts hold the digital information
+
+## Power line carrier control
+* the digital data is send on the electrical wiring of the household devices and light wiring
+* the data is encoded on a 120 kHz carrier frequence,
+* transmitted as short bursts
+* data consists of an address and a command
+* data is sent from controller to the device
+* advanced devices can receive/request with a more advanced status
+	+ status may be: on/off, dimming level, temperature or other sensing reading.
+
+## Protocol
+* The transmitted X10 packages consists:
+	+ 4bit house code followed by 1-4bit unit codes followd by 4bit command
+* for more convinient system configuration:
+	+ house code is selected as a letter from A - P
+	+ unit code is a number from 1 - 16
+* each device is configured to respond to one of the 256 possible addressed (16 x 16)
+* the device reacts to commands specifically addressed to it, or to a broadcast
+* transmitted message example:
+	+ "select A3" followed by "turn on", which means:
+	+ unit "A3" should turn on its device
+
+* One-way devices: only receive commands and do not ACK their status
+* Two-way devices: ACK their status to the network. More expensive
+
+https://en.wikipedia.org/wiki/X10_(industry_standard)
+
