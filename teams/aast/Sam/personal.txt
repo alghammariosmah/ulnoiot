@@ -180,3 +180,12 @@ Spend so much time programming a task perfectly.
 	
 
 
+
+## Fixing different pi versions:
+	* the rpi we are using (rpi 1b) supports a different kernel version. so the wifi interface wasnt able to start.
+	* TEMP1=$(uname --kernel-release | cut -d+ -f1) // will remove the + after the version name which causes the error.
+
+
+
+
+
