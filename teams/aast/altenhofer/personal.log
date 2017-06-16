@@ -337,8 +337,19 @@ ding con points to argue with
 		8 data + 2 stop bits, 250kbps up to 450meter
 		Controller -> Slave -> Slave -> terminator(120Ohm resistor)
 
-## 14:25 - xx:xx build simulator
-		
+## 14:25 - 16:30 build simulator
+	* create simulator who sends temp data
+
+# 2017_06_16
+
+## 11:00 - 12:30 research for smart home of a friend
+	* split up topics
+	* research for smart buttons (e.g. when toilet paper/dish soap runs out), 
+	alexa/echo/custom voice control, smart washing machine
+
+## 13:00 - 14:15 research for smart home of a friend
+	* counting
+	* research for smart control(client app, IFTTT, home assistant)
 
 
 
