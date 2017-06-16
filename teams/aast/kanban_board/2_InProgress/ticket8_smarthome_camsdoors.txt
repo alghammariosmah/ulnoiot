@@ -3,4 +3,4 @@ Assigned: Flo
 Start: 2017 06 16 11:00
 Finished: date time
 
-Description: Reasearch for following components: cameras & motion sensors, security (doors), smartphone control
+Description: Research for following components: cameras & motion sensors, security (doors), smartphone control

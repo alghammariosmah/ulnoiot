@@ -1,11 +1,11 @@
-#Hardware
+# Hardware
 
-##Central components
+## Central components
 - 1 x Raspberry Pi 3 Starter Kit (80€)
     * Hub for home assistant
     * https://geizhals.at/raspberry-pi-3-modell-b-a1436432.html
 
-##Doors
+## Doors
 - Electrical Locks (10.50€)
   * Used to secure the doors
   * https://de.aliexpress.com/item/Stainless-Door-12V-DC-Fail-Safe-NO-Narrow-type-Door-Electric-Strike-Lock-For-Access-Control/32797143296.html
@@ -18,6 +18,7 @@
   * To be able to plug the lock into the wemos
   * https://de.aliexpress.com/store/product/Relay-Shield-for-WeMos-D1-mini-button/1331105_32596395175.html
 
-- NFC Module (3.30€)
+- NFC Module - MFRC522 (3.30€)
   * To read the cards to grant access
+  * Works with the wemos
   * https://de.aliexpress.com/item/Compact-RFID-Reader-Writer-and-NFC-module-MFRC522-13-56MHz-Power-5V-3-3V-For-Arduino/32667518116.html
