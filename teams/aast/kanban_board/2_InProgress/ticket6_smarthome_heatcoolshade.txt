@@ -1,0 +1,6 @@
+Reporter: Chris
+Assigned: Sam
+Start: 2017 06 16 11:00
+Finished: date time
+
+Description: Reasearch for following components: smart hvac/thermostat/shading
