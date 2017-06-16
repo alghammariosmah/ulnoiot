@@ -18,3 +18,12 @@
 - Official web app
   * Can be added to homescreen
   * https://home-assistant.io/docs/frontend/mobile/
+
+## Cables
+- Micro USB Cables - Aukey 5 pieces (5.80€)
+  * To connect different devices (mainly wemos boards)
+  * https://de.aliexpress.com/item/Aukey-5-Pack-Micro-USB-Cable-Fast-Charging-Adapter-5V2A-Data-Charger-Mobile-Phone-Cable-for/32637756862.html
+  
+- Pin Cables - 20 pieces (0.60€)
+  * To connect different modules (NFC, motion sensors, etc.)
+  * https://de.aliexpress.com/item/20pcs-20cm-2-54mm-1p-1p-Pin-Female-to-Female-Color-Breadboard-Cable-Jump-Wire-Jumper/32758834607.html
