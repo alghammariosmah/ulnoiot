@@ -9,7 +9,8 @@ alexa/echo/custom voice control, smart washing machine
 
 ## Smart Washing Machine
 - Samsung Smart washing machine (669€)
-* wifi controll(controll via application), add wash(add cloth during wash process), 
+* wifi controll(control via application), add wash(add cloth during wash process), 
+* unfortunalty only able to control with samsung application.
 * https://www.amazon.de/Samsung-WW80K6404QW-EG-Waschmaschine-Inverter/dp/B01BC3TPB8/ref=sr_1_4?ie=UTF8&qid=1497607241&sr=8-4&keywords=samsung+add+wash
 
 ## Smart Buttons
