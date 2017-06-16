@@ -1,6 +1,6 @@
 Reporter: Florian
 Assigned: Florian
 Start: 2017.06.15 10:00
-Finished: 
+Finished: 2017.06.15 13:00
 
 Description: Create a scenario for project 2.
