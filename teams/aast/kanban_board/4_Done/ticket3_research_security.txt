@@ -1,5 +1,5 @@
 Reporter: Chris
-Assigned: Gerald
+Assigned: Gertsch
 Start: 2017.06.09 16:00
 Finished: 2017.06.10 17:30
 

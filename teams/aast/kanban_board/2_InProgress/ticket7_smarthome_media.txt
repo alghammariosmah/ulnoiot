@@ -1,0 +1,6 @@
+Reporter: Chris
+Assigned: Gertsch
+Start: 2017 06 16 11:00
+Finished: date time
+
+Description: Reasearch for following components: media centers/noise tracking/smart lighting
