@@ -1,0 +1,40 @@
+#Work packages
+## Voice Control (Echo Dot)
+### Rooms where echo is needed
+Floor 1:
+* family + dining + kitchen
+* living
+* study
+Floor 2:
+* bed 1
+* bed 2 // rent
+* bed 3 // rent
+* bed 4 // rent
+* activity area
+### time estimation
+- setup phase echo dot
+  * 8 x 30 min
+
+## Smart Button
+- Connecting the Button shield
+  * 6 x 20 min
+- Setting up the Wemos D1 mini
+  * 6 x 20 min
+- Adding the buttons to home assistant
+  * 6 x 2 min
+
+## Smart Washing Machine
+- Setup
+  * 30 min
+- Testing + application testing
+  * 20 min
+
+## Client Application
+- Designing
+  * 5 h
+- Programming
+  * 40 h
+- Testing + bug fixing
+  * 5 h
+- Adding to home assistant
+  * 10 h
