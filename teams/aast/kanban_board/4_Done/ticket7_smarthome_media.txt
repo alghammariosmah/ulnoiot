@@ -1,5 +1,5 @@
 Reporter: Chris
-Assigned: Gertsch
+Assigned: Sam
 Start: 2017 06 16 11:00
 Finished: date time
 
