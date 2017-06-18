@@ -1,0 +1,55 @@
+###Media centers/Noise tracking/Smart lighting
+
+
+##Media Centers
+
+#components and their prices
+8 X10 = 18 Euros/ device
+	- 3 in ground floor: 1 in big hall, 1 in the living room, 1 in the study room
+	- 5 in first floor: 4 in bedrooms, 1 in the activity area
+#sources  
+https://www.amazon.com/X10-AM466-Appliance-Module-3-Prong/dp/B00022OCBO
+
+#Work packages and Effort:
+1:30 hours per device: 12 hours in total:
+	- Connecting the machine wires
+	8 x 30 min
+	- Installing the X10
+	8 x 60 min
+
+
+
+
+##Noise Tracking 
+#components and their prices
+6 SPI Noise tracker = 333 Euros/device
+	- 2 ground floor: one in the garage and one outside
+	- 4 first floor: in every bedroom.
+
+#sources  
+https://www.thelabeshop.com/Analyzers/Protocol-Analyzers/I2C-SPI/TotalPhase-Beagle-I2C-SPI-MDIO-Analyzer/
+https://www.totalphase.com/blog/2014/08/can-interface-beagle-spi-protocol-analyzer-high-impedance-spi-signal-line-resolve-signal-noise/
+
+#Work packages and Effort:
+2 hours per device: 12 hours in total 
+	- Connecting the machine wires
+	6 x 30 min
+	- Connecting and Installing the SPI
+	6 x 60 min
+
+
+
+##Smart Lighting 
+
+#components and their prices
+25 Wifi RGB : 5 euros/device
+	- 12 Ground floor: in every room, sub-room, outside garage, and stairs
+	- 13 First floor: in every room, sub-room, and stairs. 
+
+#sources  
+https://www.alibaba.com/product-detail/LED-Light-Smart-Wifi-RGB-E27_60622278724.html?spm=a2700.7735675.30.106.DUTF1c&s=p
+
+#Work packages and Effort:
+15 mins per device: 6 hours in total.
+
+
