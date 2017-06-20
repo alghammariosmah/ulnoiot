@@ -15,6 +15,7 @@ Floor 1
 
 Floor 2
 1 x Activity Area
+1 x Own bed room
 
 ##Securing the doors
 - Installing door locks
@@ -26,15 +27,14 @@ Floor 2
 - Setting up the Wemos D1 mini
   * 15 x 20 min
 - Adding the doors and NFC modules to home assistant
-  * 30 x 2 min
+  * 30 x 4 min
+- Setting up the NFC access cards 
+  * 6 * 5 min
   
 ##Installing the cameras
 - Flashing and configuring the firmware
-  * 11 x 20 min
+  * 12 x 20 min
 - Placing the cameras
-  * 11 x 3 min
+  * 12 x 5 min
 - Adding the cameras to home assistant
-  * 11 x 3 min
-
-##Installing motion sensors
-
+  * 12 x 5 min
