@@ -48,16 +48,16 @@ perl /bin/fhem.pl /etc/fhem.cfg
 After that fhem booted and was accessible through: 127.0.0.1:8083.
 
 NEW
-As the method using the user repository seems quite buggy, i decided to clone the current version from github.
+As the method using the user repository seems quite buggy, I decided to clone the current version from github.
 
 git clone https://github.com/mhop/fhem-mirror.git
 
-Then i installed the dependencies, which I knew of.
+Then I installed the dependencies, which I knew of.
 sudo aura -S perl-json
 sudo aura -S perl-xml-sax-expat
 sudo aura -S perl-xml-simple
 
-Also (in order to be able to use mqtt) install Net::MQTT::Message (maybe also Net::MQTT::Simple) using CPAN.
+Also (in order to be able to use mqtt) install Net::MQTT::Message (maybe also Net::MQTT::Simple) using CPAN: cpan -> install Net::MQTT::Message
 
 Then add the following to fhem.cfg
 attr global motd none
@@ -88,3 +88,26 @@ attr mqtt_lock subscribeReading_state lock/relay
 To save the current settings to the configuration file, use "save".
 
 The device can then be controlled via the web interface.
+
+Next connect a button to the Wemos and publish its state via MQTT with:
+```
+mqtt("192.168.12.1", "button")
+button("lower", d1, "depressed", "pressed")
+run()
+```
+
+You can then add this button the fhem as well:
+
+```
+define mqtt_button MQTT_DEVICE
+attr mqtt_button subscribeReading_state button/lower
+```
+
+Finally you can link the button and the lock with the following snippet:
+
+```
+define button_unlock notify mqtt_button:pressed set mqtt_lock on
+define button_lock notify mqtt_button:depressed set mqtt_lock off
+```
+
+This will unlock the lock as long as the button is pressed and lock it again if the button is depressed.
