@@ -267,6 +267,13 @@ Spend so much time programming a task perfectly.
 	* run()
 	* mqtt_send RGB/RGB1/rgb/set blue // on pi console 
 
+## Adding 6 RGB same as above:
+	* // The port for this is 5v+
+	* //rgb(name, pin_r, pin_g, pin_b, ignore_case=True)
+	* mqtt("192.168.12.1", "RGB")
+	* rgb("RGB6", d3, d4, d2)
+	* run()
+	* mqtt_send RGB/RGB6/rgb/set 0,255,255
 
 
 	
