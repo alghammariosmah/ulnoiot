@@ -57,8 +57,34 @@ sudo aura -S perl-json
 sudo aura -S perl-xml-sax-expat
 sudo aura -S perl-xml-simple
 
+Also (in order to be able to use mqtt) install Net::MQTT::Message (maybe also Net::MQTT::Simple) using CPAN.
 
+Then add the following to fhem.cfg
+attr global motd none
+
+Then start fhem by issuing:
+perl ./fhem.pl ./fhem.cfg
+
+Update fhem by issuing:
+
+```
+attr global backup_before_update 0
+save
+update
+```
 
 To kill fhem, the quite brutal but effective "killall perl" can be used.
 
 With the "help" command, one can get an overview over the available commands.
+
+To define our lock inside fhem over mqtt use:
+
+```
+define mqtt MQTT 192.168.12.1:1883
+attr mqtt_lock publishSet on off lock/relay/set
+attr mqtt_lock subscribeReading_state lock/relay
+```
+
+To save the current settings to the configuration file, use "save".
+
+The device can then be controlled via the web interface.
