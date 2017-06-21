@@ -177,9 +177,6 @@ Spend so much time programming a task perfectly.
 	client.loop_forever() 
 
 
-	* Run the Controller on pi , and the publisher on the virtual environment. 
-
-
 ## Fixing different pi versions:
 	* the rpi we are using (rpi 1b) supports a different kernel version. so the wifi interface wasnt able to start.
 	* TEMP1=$(uname --kernel-release | cut -d+ -f1) // will remove the + after the version name which causes the error.
@@ -262,9 +259,13 @@ Spend so much time programming a task perfectly.
 	* media centers/noise tracking/smart lighting
 	* creating work packages research and calculation
 
-
-
-
+## RGB set up on the console:
+	* //check the ports where the RGB colors are triggered. 
+	* //rgb(name, pin_r, pin_g, pin_b, ignore_case=True)
+	* mqtt("192.168.12.1", "RGB")
+	* rgb("RGB1", d3, d4, d2)
+	* run()
+	* mqtt_send RGB/RGB1/rgb/set blue // on pi console 
 
 
 
