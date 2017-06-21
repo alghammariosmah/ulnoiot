@@ -1,0 +1,15 @@
+
+
+## RGB set up on the console:
+	* //check the ports where the RGB colors are triggered. 
+	* //rgb(name, pin_r, pin_g, pin_b, ignore_case=True)
+	* mqtt("192.168.12.1", "RGB")
+	* rgb("RGB1", d3, d4, d2)
+	* run()
+	* mqtt_send RGB/RGB1/rgb/set blue // on pi console 
+
+
+
+	
+
+
