@@ -211,7 +211,7 @@ Spend so much time programming a task perfectly.
 		ioBridge can be used to translate the X10 protocol to a web service API via the X10 PSC04 Powerline Interface Module.
 		The magDomus home controller from magnocomp allows interconnection and inter-operation between most home automation technologies.
 
-# Presentations:
+## Presentations:
 	#Canbus
 		- automatice bus syste, relaible protocol in harsh conditions,uses OSI model. 
 		- Transmission is a differential transmission. 
@@ -256,6 +256,11 @@ Spend so much time programming a task perfectly.
 		- Transmission speed 250 kbps. 
 		
 		
+## RGB chip codes
+
+## research for smart home of a friend
+	* media centers/noise tracking/smart lighting
+	* creating work packages research and calculation
 
 
 

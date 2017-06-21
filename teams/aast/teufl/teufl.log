@@ -260,153 +260,225 @@ Therfore, the program minicom or picocom can be used with the command for exampl
 	4. Write text to the display from wemosd1mini with command "devices["dp1"].println("Hallo Flo")"
 
 ## Presentations
-Can Bus
-	Automotive field
-	Connecting ECUs
-	Publish/Subscriber system
-	Two different speeds, 125kbit/s and 1Mbit/s
-	Differential transmission
-	Real-time transmission
-	CSMA/CA is used
-	Bridges are available
-	OBD2 connectors
+###Can Bus
+	* Automotive field
+	* Connecting ECUs
+	* Publish/Subscriber system
+	* Two different speeds, 125kbit/s and 1Mbit/s
+	* Differential transmission
+	* Real-time transmission
+	* CSMA/CA is used
+	* Bridges are available
+	* OBD2 connectors
 	
-SPI
+### SPI
+	* Serial Peripheral Interface
+	* Used for WIFI module, camera modules, nfc modules, in every laptop/pc
+	* Extremely simple, higher throughput than I2C or SMBus
+	* No error checking protocols
+	* No hot-swapping (dynamically adding notes)
+	* Full duplex communication
+	* Master/Slave architecture
+	* Also one master and multiple slaves possible
+	* Signal lines (SCK - Serial clock, MOSI - Master output Slave input, MISO - Master output Slave input, SS - Slave select
 
-
-
-X10
-	Communication protocol for electronic devices
-	Carrier frequency 120 kHz -> transmitted as short bursts
-	4 bit house code -> 1-4 bit unit code -> 4 bit command
-	One way and two way devices
-	Different modules can be used -> temperature, light, motion, infra-red
-	ioBridge -> translate X10 protocol to a web service
+### X10
+	* Communication protocol for electronic devices
+	* Carrier frequency 120 kHz -> transmitted as short bursts
+	* 4 bit house code -> 1-4 bit unit code -> 4 bit command
+	* One way and two way devices
+	* Different modules can be used -> temperature, light, motion, infra-red
+	* ioBridge -> translate X10 protocol to a web service
 	
-Zigbee
-	For controlling sensor networks
-	Based int IEEE 802.15.4 standard
-	Different frequency bands 2,4 GHz, 915 MHz and 868 MHz	
-	Topology = Star, Cluster Tree and Mesh
-	Environmental monitoring
-	2003 developed
+### Zigbee
+	* For controlling sensor networks
+	* Based int IEEE 802.15.4 standard
+	* Different frequency bands 2,4 GHz, 915 MHz and 868 MHz	
+	* Topology = Star, Cluster Tree and Mesh
+	* Environmental monitoring
+	* 2003 developed
 
-Z-Wave
-	New technology, since 2008
-	Wireless technology
-	Use cases -> device controlling, monitoring
-	Frequency range -> 1GHz
-	Low power
-	Mesh networks
-	Similar to Zigbee and Bluetooth
-	Works with OpenADR
-	Interoperability -> quiet frequency
-	Prices between 17$ - 136$
+### Z-Wave
+	* New technology, since 2008
+	* Wireless technology
+	* Use cases -> device controlling, monitoring
+	* Frequency range -> 1GHz
+	* Low power
+	* Mesh networks
+	* Similar to Zigbee and Bluetooth
+	* Works with OpenADR
+	* Interoperability -> quiet frequency
+	* Prices between 17$ - 136$
 
+### 1- Wire
+	* Based on master and slave principle
+	* Slaves have unique ID
+	* Do not need an external power supply
+	* Usage -> temperature sensor, timers, memory, battery, authentication
+	* Micro Lan -> one master with multiple slaves
+	* Bus -> 3 to 5 volts
+	* No collition avoidance
+	* 1-Wire means only need one wire + ground
 
-1- Wire
-	Based on master and slave principle
-	Slaves have unique ID
-	Do not need an external power supply
-	Usage -> temperature sensor, timers, memory, battery, authentication
-	Micro Lan -> one master with multiple slaves
-	Bus -> 3 to 5 volts
-	No collition avoidance
-	1-Wire means only need one wire + ground
-
-I2C
-	First version 1982 by Phillips
-	Normal mode and fast mode -> 100 kbit/s to 400 kbit/s
-	1998 -> version 2.0
-	Now -> 2014 with version 6.0
-	Appllications are monitors, displays, wemos
+### I2C
+	* First version 1982 by Phillips
+	* Normal mode and fast mode -> 100 kbit/s to 400 kbit/s
+	* 1998 -> version 2.0
+	* Now -> 2014 with version 6.0
+	* Appllications are monitors, displays, wemos
 	
-
-KNX
-	OSI-based network communication protocol
-	Combining of free protocols which were already there
-	Twisted pair wiring
-	Independent of any particular platform
-	16 bit address space
-	2 twisted pairs -> one usable for data
-	Supply voltage of 30V
+### KNX
+	* OSI-based network communication protocol
+	* Combining of free protocols which were already there
+	* Twisted pair wiring
+	* Independent of any particular platform
+	* 16 bit address space
+	* 2 twisted pairs -> one usable for data
+	* Supply voltage of 30V
 	
-RS232 / RS422 / RS485 / DMX-512
-	Standards for serial communicatio in 1960s
-	Used in computer serial ports
-	Used in industrial solutions
-	RS-232 -> 256 kbit/s -> 15m max length -> does not define charcter encoding -> full duplex
-	RS-422 -> successor of RS-232 -> up to 10 Mbit/s -> max length not defined	
-	RS-485 -> successor of RS-422 -> multipoint system are supported -> also 10 Mbit/s -> half or full duplex
-	DMX-512 -> Standard for digital communication -> speed is 250 kbit/s -> maximum cable length is 450m -> 3 to 5 wires
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-
-	
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### RS232 / RS422 / RS485 / DMX-512
+	* Standards for serial communicatio in 1960s
+	* Used in computer serial ports
+	* Used in industrial solutions
+	* RS-232 -> 256 kbit/s -> 15m max length -> does not define charcter encoding -> full duplex
+	* RS-422 -> successor of RS-232 -> up to 10 Mbit/s -> max length not defined	
+	* RS-485 -> successor of RS-422 -> multipoint system are supported -> also 10 Mbit/s -> half or full duplex
+	* DMX-512 -> Standard for digital communication -> speed is 250 kbit/s -> maximum cable length is 450m -> 3 to 5 wires
+
+
+# Sunday 18. June 14:00 - 17:00
+## Router (access points)
+### NETGEAR R6220 Wireless Router (R6220-100PES) (75.0€)
+    * WLAN router with 2.4 GHz and 5 GHz range
+    * Standards 802.11 a/b/g/n/ac
+    * 2 external antennas
+    * WPA, WPA2 encryption
+    * WPS for smart configuration
+    * WLAN router for large homes
+    * Easy configuration with Netgear genie software
+    * http://www.mediamarkt.at/de/product/_netgear-r6220-wireless-router-r6220-100pes-1412347.html
+
+
+### NETGEAR Wireless Router WNR2000-200PES Rangermax (33.0€)
+    * WLAN router with 2.4 GHz range
+    * Standards 802.11 b/g/n
+    * Internal antennas
+    * WPA, WPA2 encryption
+    * WPS for smart configuration
+    * WLAN router for small homes
+    * Easy configuration with Netgear genie software
+    * http://www.mediamarkt.at/de/product/_netgear-wireless-router-wnr2000-200pes-rangermax-1389996.html
+
+
+## Smart thermostats
+### Anself WIFI smart thermostat 16A 110 ~ 240V (47.5€)
+    * Smart thermostat for electrical heaters
+    * Integrated WIFI
+    * LCD display
+    * Control the thermostat via WLAN
+    * https://de.aliexpress.com/item/16A-110-240V-Electric-Heating-WIFI-Smart-Thermostat-with-Touchscreen-LCD-Display-Durable-Programmable-Temperature-Controller/32804567411.html
+
+
+## Wemosd1mini (3.5€)
+    * Integrated WLAN
+    * ESP-8266EX microcontroller
+    * https://de.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html
+
+## Micro USB Cables - Aukey 5 pieces (5.80€)
+    * To connect different devices (mainly wemos boards)
+    * https://de.aliexpress.com/item/Aukey-5-Pack-Micro-USB-Cable-Fast-Charging-Adapter-5V2A-Data-Charger-Mobile-Phone-Cable-for/32637756862.html
+
+### Temperatur and humidity (2.3€)
+    * Wemosd1mini temperature and humidity shield
+    * Place in every room to monitor temperature and humidity
+    * https://de.aliexpress.com/store/product/DHT-Shield-for-WeMos-D1-mini-DHT11-Single-bus-digital-temperature-and-humidity-sensor-module-sensor/1331105_32534235492.html
+
+### Shutters (2.7€)
+    * Wemosd1mini motor control shield
+    * Connect the shutters of each windows to control them
+    * https://de.aliexpress.com/store/product/Motor-Shield-For-WeMos-D1-mini-I2C-Dual-Motor-Driver-TB6612FNG-1A-V1-0-0/1331105_32700182142.html
+
+### Ventilation
+#### Wemosd1mini motor control shield (2.7€)
+    * Connect to 12/24V DC linear actuator for opening windows
+    * https://de.aliexpress.com/store/product/Motor-Shield-For-WeMos-D1-mini-I2C-Dual-Motor-Driver-TB6612FNG-1A-V1-0-0/1331105_32700182142.html
+
+#### Wemosd1mini relay shield (1.8€)
+    * Connect the relay to the ceiling fan for controling it
+    * https://de.aliexpress.com/store/product/Relay-Shield-for-WeMos-D1-mini-button/1331105_32596395175.html
+
+#### 12V linear actuator for opening windows (13.5€)
+    * Linear actuators for controlling the windows for ventilation
+    * https://www.alibaba.com/product-detail/12V-Linear-Actuator-for-Window-Open_60293988621.html?s=p
+
+#### Ceiling fan (99.0€)
+    * Ceiling fan for better ventilation
+    * http://www.hornbach.at/shop/Deckenventilator-Audubon-Ahorn-Silber/7226562/artikel.html
+    
+### Lightning (1.8€)
+    * Wemosd1mini relay shield
+    * Connect the relay in a two-way connection to the lightning switches
+    * https://de.aliexpress.com/store/product/Relay-Shield-for-WeMos-D1-mini-button/1331105_32596395175.html
+
+
+# Monday 19. June 14:00 - 16:00
+## Hardware list
+### Smart thermostat
+    * 12 x Anself WIFI smart thermostat 16A 110 ~ 240V (47.5€)
+
+### Smart light
+    * 14 x Wemosd1mini (3.5€)
+    * 14 x Wemosd1mini relay shield (1.8€)
+
+### Smart shutter/window
+    * 18 x Wemosd1mini (3.5€)
+    * 18 x Wemosd1mini motor control shield (2.7€)
+    * 12 x 12V linear actuator for opening windows (13.5€)
+
+### Smart ceiling fan
+    * 3 x ceiling fan (99.0€)
+    * 3 x Wemosd1mini (3.5€)
+    * 3 x Wemosd1mini relay shield (1.8€)
+
+### Temperature/humidity
+    * 13 x Wemosd1mini temperature and humidity shield (2.3€)
+
+### Wires
+    * 7 x Micro USB Cables - Aukey 5 pieces (5.80€)
+
+
+# Tuesday 20. June 13:00 - 17:00
+## Prepairing presentation
+
+## Hardware costs
+### Smart thermostat
+    * 570€
+### Smart light
+    * 74.2€
+### Smart shutter/window
+    * 273.6€
+### Smart ceiling fan
+    * 312.9€
+### Temperature/humidity
+    * 29.9€
+### Wires
+    * 40.6€
+### Overall costs
+    * 1301.2€
+
+## Working hours
+    * Configuration of all four WLAN router (1h)
+    * Installing smart thermostats, connecting to WLAN and to home assistant (3h)
+    * Soldering and flashing of all wemosd1mini (12h)
+    * Installing two-way connection for smart lightning (10h)
+    * Installing temperature/humidity sensor shield (2h)
+    * Installing linear actuators on all windows (4h)
+    * Setting up wemos for shutters and windows (5h)
+    * Building ceiling fans (4h)
+    * Setting up wemos for ceiling fans (1h)
+    * Adding all devices to home assistant (2h)
+    * Testing (1h)
+
+### Overall working hours
+    * 45h
 
