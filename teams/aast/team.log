@@ -387,6 +387,25 @@ Therfore, the program minicom or picocom can be used with the command for exampl
         * RS-485 -> successor of RS-422 -> multipoint system are supported -> also 10 Mbit/s -> half or full duplex
         * DMX-512 -> Standard for digital communication -> speed is 250 kbit/s -> maximum cable length is 450m -> 3 to 5 wires
 
+##Simulators
+###LED Simulator
+A simulator written in Ruby.
+It accepts two parameters, the mqtt server and the topic it subscribes to.
+An example call would be: ./led.rb 192.168.12.1 "led/1"
+
+The simulator then listens to mqtt messages used to control it.
+With "led/1" (the subscribed topic) and a payload, which defines the color, the color of the led can be set. To test, a mqtt sender script was written, which can be called with the following call:
+
+./send.rb 192.168.12.1 "led/1" "purple"
+
+Additionally the leds can also be turned on and off, with turn.
+
+./send.rb 192.168.12.1 "led/1/turn" "on"
+./send.rb 192.168.12.1 "led/1/turn" "off"
+
+To display the current state, the simulator colorises the terminal 
+
+
 ## Your friends home
 
 ### Counting

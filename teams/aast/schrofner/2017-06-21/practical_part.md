@@ -11,3 +11,13 @@ And then set the analog port to publish mqtt messages with:
 analog("noise1", threshold=None, precision=1)
 
 Finally call run() to publish the updates.
+
+##Using the motion sensor on the Wemos
+Plug in the motion sensor. We connected it to 3.3v, GRD and D2.
+
+Subscribe to the mqtt server:
+mqtt("192.168.12.1", "motion")
+
+Send mqtt messages with:
+button("motion1", d2, "detected", "not detected") 
+run()
