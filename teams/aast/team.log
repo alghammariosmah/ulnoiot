@@ -303,6 +303,90 @@ Therfore, the program minicom or picocom can be used with the command for exampl
 	2. Import driver with "import ulnoiot.shield.devkit1_display"
 	3. Displays the current ip and the ulnoiot path
 
+## Presentations
+###Can Bus
+        * Automotive field
+        * Connecting ECUs
+        * Publish/Subscriber system
+        * Two different speeds, 125kbit/s and 1Mbit/s
+        * Differential transmission
+        * Real-time transmission
+        * CSMA/CA is used
+        * Bridges are available
+        * OBD2 connectors
+
+### SPI
+        * Serial Peripheral Interface
+        * Used for WIFI module, camera modules, nfc modules, in every laptop/pc
+        * Extremely simple, higher throughput than I2C or SMBus
+        * No error checking protocols
+        * No hot-swapping (dynamically adding notes)
+        * Full duplex communication
+        * Master/Slave architecture
+
+### X10
+        * Communication protocol for electronic devices
+        * Carrier frequency 120 kHz -> transmitted as short bursts
+        * 4 bit house code -> 1-4 bit unit code -> 4 bit command
+        * One way and two way devices
+        * Different modules can be used -> temperature, light, motion, infra-red
+        * ioBridge -> translate X10 protocol to a web service
+
+### Zigbee
+        * For controlling sensor networks
+        * Based int IEEE 802.15.4 standard
+        * Different frequency bands 2,4 GHz, 915 MHz and 868 MHz
+        * Topology = Star, Cluster Tree and Mesh
+        * Environmental monitoring
+        * 2003 developed
+
+### Z-Wave
+        * New technology, since 2008
+        * Wireless technology
+        * Use cases -> device controlling, monitoring
+        * Frequency range -> 1GHz
+        * Low power
+        * Mesh networks
+        * Similar to Zigbee and Bluetooth
+        * Works with OpenADR
+        * Interoperability -> quiet frequency
+        * Prices between 17$ - 136$
+
+### 1- Wire
+        * Based on master and slave principle
+        * Slaves have unique ID
+        * Do not need an external power supply
+        * Usage -> temperature sensor, timers, memory, battery, authentication
+        * Micro Lan -> one master with multiple slaves
+        * Bus -> 3 to 5 volts
+        * No collition avoidance
+        * 1-Wire means only need one wire + ground
+
+### I2C
+        * First version 1982 by Phillips
+        * Normal mode and fast mode -> 100 kbit/s to 400 kbit/s
+        * 1998 -> version 2.0
+        * Now -> 2014 with version 6.0
+        * Appllications are monitors, displays, wemos
+
+### KNX
+        * OSI-based network communication protocol
+        * Combining of free protocols which were already there
+        * Twisted pair wiring
+        * Independent of any particular platform
+        * 16 bit address space
+        * 2 twisted pairs -> one usable for data
+        * Supply voltage of 30V
+
+### RS232 / RS422 / RS485 / DMX-512
+        * Standards for serial communicatio in 1960s
+        * Used in computer serial ports
+        * Used in industrial solutions
+        * RS-232 -> 256 kbit/s -> 15m max length -> does not define charcter encoding -> full duplex
+        * RS-422 -> successor of RS-232 -> up to 10 Mbit/s -> max length not defined
+        * RS-485 -> successor of RS-422 -> multipoint system are supported -> also 10 Mbit/s -> half or full duplex
+        * DMX-512 -> Standard for digital communication -> speed is 250 kbit/s -> maximum cable length is 450m -> 3 to 5 wires
+
 ## Your friends home
 
 ### Counting

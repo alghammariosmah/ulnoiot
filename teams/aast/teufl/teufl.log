@@ -468,7 +468,7 @@ Therfore, the program minicom or picocom can be used with the command for exampl
 
 ## Working hours
     * Configuration of all four WLAN router (1h)
-    * Installing smart thermostats, connecting to WLAN and to home assistent (3h)
+    * Installing smart thermostats, connecting to WLAN and to home assistant (3h)
     * Soldering and flashing of all wemosd1mini (12h)
     * Installing two-way connection for smart lightning (10h)
     * Installing temperature/humidity sensor shield (2h)
@@ -476,7 +476,7 @@ Therfore, the program minicom or picocom can be used with the command for exampl
     * Setting up wemos for shutters and windows (5h)
     * Building ceiling fans (4h)
     * Setting up wemos for ceiling fans (1h)
-    * Adding all devices to home assistent (2h)
+    * Adding all devices to home assistant (2h)
     * Testing (1h)
 
 ### Overall working hours
