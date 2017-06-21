@@ -29,7 +29,7 @@ lock:
     name: "Lock"
 ```
 
-So that mqtt works, we need to define the mqtt broker:
+So that mqtt works, we need to define the mqtt broker as well:
 ```yaml
 mqtt:
   broker: 192.168.12.1

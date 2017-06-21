@@ -393,18 +393,20 @@ A simulator written in Ruby.
 It accepts two parameters, the mqtt server and the topic it subscribes to.
 An example call would be: ./led.rb 192.168.12.1 "led/1"
 
-The simulator then listens to mqtt messages used to control it.
+The simulator then listens to mqtt messages, which are used to control it.
 With "led/1" (the subscribed topic) and a payload, which defines the color, the color of the led can be set. To test, a mqtt sender script was written, which can be called with the following call:
 
 ./send.rb 192.168.12.1 "led/1" "purple"
 
-Additionally the leds can also be turned on and off, with turn.
+Additionally the leds can also be turned on and off, with the turn topic.
 
 ./send.rb 192.168.12.1 "led/1/turn" "on"
 ./send.rb 192.168.12.1 "led/1/turn" "off"
 
-To display the current state, the simulator colorises the terminal 
+To display the current state, the simulator colorises the terminal with the specified color (or black, if it is turned off).
 
+After the status and/or color has changed, the simulator will publish an update on:
+"led/1/status" and "led/1/color". Status can either be "on" or "off", whereas color defines the current color of the led.
 
 ## Your friends home
 
