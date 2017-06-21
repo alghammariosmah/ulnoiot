@@ -372,7 +372,7 @@ ding con points to argue with
 	* mqtt("192.168.12.1", "noise")
 	* analog("noise", threshold=NOne, precision=1)
 
-## 10:00 - xx:xx install homeassistant on my PC
+## 10:00 - 11:10 install homeassistant on my PC
 	* download python 3
 	* follow the installation guide for home assistant
 	* C:\Users\christian\AppData\Roaming\.homeassistant
@@ -396,3 +396,5 @@ ding con points to argue with
 	* run()
 	* goto homeassistant ui
 	* check log via buttons
+
+## 11:10 - xx:xx 
