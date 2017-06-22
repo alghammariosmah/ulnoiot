@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -14,11 +15,14 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:text="All Devices"/>
+            android:text="Door Lock"/>
 
         <ToggleButton
+            android:id="@+id/btn_lock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textOff="Unlock"
+            android:textOn="Lock"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"/>
     </RelativeLayout>
@@ -32,44 +36,16 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:text="TV"/>
+            android:text="Media Play/Pause"/>
 
         <ToggleButton
+            android:id="@+id/btn_media"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textOff="Play"
+            android:textOn="Pause"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"/>
     </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:paddingLeft="20dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:text="Hifi"/>
-
-        <ToggleButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:gravity="center"
-        android:text="Lock Door"/>
-
-    <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:gravity="center"
-            android:src="@drawable/lock"/>
 
 </LinearLayout>

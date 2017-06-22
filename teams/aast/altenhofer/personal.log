@@ -397,4 +397,128 @@ ding con points to argue with
 	* goto homeassistant ui
 	* check log via buttons
 
-## 11:10 - xx:xx 
+## 11:10 - 12:05 added gradle dependency to simulator
+	* get rid of the old library (broken)
+	* checked Paho java mqtt client
+	* import with gradle
+	* minor code changes
+	* testing
+
+## 12:40 - 14:00 setup openHab (windows)
+	* // http://docs.openhab.org/installation/windows.html
+	* start.bat
+	* http://192.168.12.235:8080 // choose basic at package selection, choose paper ui
+	* goto add-ons, binding install mqtt binding // bindings are the protocols (communication)
+	* tinkering around
+	* https://github.com/openhab/openhab1-addons/wiki/Windows
+	* http://docs.openhab.org/tutorials/beginner/configuration.html
+	* http://www.openhab.org/downloads.html
+	* http://docs.openhab.org/installation/windows.html
+
+## 14:00 - 16:15 zwave
+	* Devices: Vision Z-Wave USB Dongle, Fibaro wall plug FGWPE
+	* find com-port of the zstick(device manager -> Ports(COM & LPT) -> UZB(COM3))
+	* find a usable software to use the zstick(to read data from the zwave plug)
+	* install openHub // if not so
+	* http://192.168.12.235:8080
+	* goto add-ons, install z-wave binding
+	* goto inbox, +, COM3 serial port(check in device monitor)
+	* the usb dongle wont be recognized(or recognized as offline on COM3 port)
+	* goto inbox and z-wave binding, search. find nodes.
+
+# 2017_06_22
+
+## 09:30 - 10:00 finding scenarios for project 3
+	* research
+
+## 10:00 - 10:50 setting up fhem
+	* // http://fhem.de/HOWTO_Windows.html
+	* download fhem
+	* download strawberry perl (use msi package to update and install moduls) // extract in fhem folder
+	* open fhem.cfg file add following global attribute:
+	* attr global motd none
+
+	* perl fhem.pl fhem.cfg // restart (open commandline in fhem dif) 
+	* localhost:8083/fhem // open webinterface
+	* every commands can be typed in the webinterface eg. "shutdown restart"
+
+## 10:50 - 11:50 setup lock
+	* define mqttbroker MQTT 192.168.1.104:1883 // connect to mqttserver
+	* not working Win32::SerialPort modul is missing
+	* goto fhem/perl/bin 
+	* cpan.bat // execute cpan bat
+	* install Win32::SerialPort
+	* // not working
+	* download http://search.cpan.org/~bbirth/Win32-SerialPort-0.22/lib/Win32/SerialPort.pm
+	* perl nomake_install works fine
+	* define mqttbroker MQTT 192.168.1.104
+	* define mqtt_lock MQTT_DEVICE // add new mqtt device
+	* attr mqtt_lock publishSet on off lock/relay/set 
+	* // add method to control lock(publishSet is the method to pub. on the endpoint "lock/relay/set)
+	* state is ???
+	* attr mqtt_lock subscribeReading_state lock/relay
+	* // get the current state on "lock/relay" endpoint
+	* unsorted devices, mqqt_server -> connect
+	* unsorted devices, mqtt_lock -> set on/off
+
+## 11:50 - 13:00 trying triggers
+	* running java temp simulator: when temp > 25 open lock
+	* define mqtt_temp_trigger notify set test test // create a "dummy notify" better editable in the notify edit menu
+	* script looks like:
+	* mqtt_temp_sim { // listen on this device
+	
+if($EVTPART1 > 25) {	// when the value is > 25
+	fhem "set mqtt_lock on"
+	// send/set this
+	} else { 
+	
+fhem "set mqtt_lock off" // send/set this otherwise.
+	
+}
+}
+
+## 13:00 - 17:20 integrate android app to fhem
+	* import mqtt client
+	* set app as device in fhem
+	* define mqtt_client MQTT_DEVICE // add client as device
+	* attr mqtt_client subscribeReading_command client/endpoint
+	* // create trigger
+	* mqtt_client {
+	if($EVTPART1 eq "lock") {
+	# lock
+	  if($EVTPART2 eq "on") {
+	    fhem "set mqtt_lock on"
+	  } else {
+	    fhem "set mqtt_lock off"
+	  }
+	}
+	}
+	* // turn on light simulator lights with app
+	* // add light sim as device
+	* attr mqtt_light subscribeReading_state led/1/state // read state
+	* attr mqtt_light subscribeReading_color led/1/color // read color
+	* attr mqtt_light publishSet on off led/1/turn	// set state
+	* attr mqtt_light publishSet led/1 // set color
+	* mqtt_client:* {
+	if ($EVTPART1 eq "led") {
+	  if ($EVTPART2 eq "all") {
+	    fhem "set mqtt_light1 ${EVTPART3}";
+	    fhem "set mqtt_light2 ${EVTPART3}";
+	    fhem "set mqtt_light3 ${EVTPART3}";
+	  } else {
+	    fhem "set mqtt_light${EVTPART2} ${EVTPART3}"
+	  }
+	} elsif ($EVTPART1 eq "lock") {
+	  fhem "set mqtt_lock ${EVTPART3}"
+	}
+	}
+	* findings: light as well as lock (even if the lock only has 2 necessary parameters)
+	* should use the same amount of EVENT parts.
+	* lock should send "lock on"/"lock off", led send: "led 1 on"/"led 1 off" //client side
+	* because we are using led and lock in the same trigger
+	* the eventpart has 4 eventparts. therefor lock should send "lock 1 on"
+
+## 17:20 - 17:40 integrating kodi to fhem
+	* define kodi KODI 192.168.1.104 tcp
+	* integrate kodi call into application
+
