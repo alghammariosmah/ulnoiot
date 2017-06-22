@@ -1,0 +1,33 @@
+[Version]
+Signature="$Windows NT$"
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Provider=%manu%
+DriverVer=06/10/2013,0.0.4.0
+CatalogFile=uzb.cat
+Class=Ports
+
+[Manufacturer]
+%manu%=ZComDev, NTx86, NTamd64
+
+[ZComDev.NTx86]
+%dev%=ZComInst, USB\VID_0658&PID_0200
+
+[ZComDev.NTamd64]
+%dev%=ZComInst, USB\VID_0658&PID_0200
+
+[ZComInst]
+include=mdmcpq.inf
+CopyFiles=FakeModemCopyFileSection
+AddReg=LowerFilterAddReg,SerialPropPageAddReg
+
+[ZComInst.Services]
+include = mdmcpq.inf
+AddService = usbser, 0x00000002, LowerFilter_Service_Inst
+
+[SerialPropPageAddReg]
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[Strings]
+manu = "Sigma Designs"
+dev = "UZB"
+svc = "UZB"

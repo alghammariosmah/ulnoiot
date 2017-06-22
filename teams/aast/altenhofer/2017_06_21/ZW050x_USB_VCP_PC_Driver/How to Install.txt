@@ -1,0 +1,2 @@
+1) Right click on "uzb.inf"
+2) Click on "Install" from the drop down menu
