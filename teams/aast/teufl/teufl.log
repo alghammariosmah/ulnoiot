@@ -384,14 +384,14 @@ Therfore, the program minicom or picocom can be used with the command for exampl
     * ESP-8266EX microcontroller
     * https://de.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html
 
-## Micro USB Cables - Aukey 5 pieces (5.80€)
+## Micro USB Cables - Aukey 5 pieces (5.8€)
     * To connect different devices (mainly wemos boards)
     * https://de.aliexpress.com/item/Aukey-5-Pack-Micro-USB-Cable-Fast-Charging-Adapter-5V2A-Data-Charger-Mobile-Phone-Cable-for/32637756862.html
 
-### Temperatur and humidity (2.3€)
-    * Wemosd1mini temperature and humidity shield
+### Temperatur and humidity (0.73€)
+    * Arduino temperature and humidity sensor
     * Place in every room to monitor temperature and humidity
-    * https://de.aliexpress.com/store/product/DHT-Shield-for-WeMos-D1-mini-DHT11-Single-bus-digital-temperature-and-humidity-sensor-module-sensor/1331105_32534235492.html
+    * https://www.aliexpress.com/item/1pcs-DHT11-Digital-Temperature-and-Humidity-Sensor-Module-for-Arduino-UNO-R3-lot-free-shipping/32666492380.html
 
 ### Shutters (2.7€)
     * Wemosd1mini motor control shield
@@ -441,7 +441,7 @@ Therfore, the program minicom or picocom can be used with the command for exampl
     * 3 x Wemosd1mini relay shield (1.8€)
 
 ### Temperature/humidity
-    * 13 x Wemosd1mini temperature and humidity shield (2.3€)
+    * 13 x Arduino temperature and humidity sensor (0.73€)
 
 ### Wires
     * 7 x Micro USB Cables - Aukey 5 pieces (5.80€)
@@ -460,11 +460,11 @@ Therfore, the program minicom or picocom can be used with the command for exampl
 ### Smart ceiling fan
     * 312.9€
 ### Temperature/humidity
-    * 29.9€
+    * 9.5€
 ### Wires
     * 40.6€
 ### Overall costs
-    * 1301.2€
+    * 1280.8€
 
 ## Working hours
     * Configuration of all four WLAN router (1h)
@@ -481,4 +481,112 @@ Therfore, the program minicom or picocom can be used with the command for exampl
 
 ### Overall working hours
     * 45h
+
+# Wednesday 21. June 08:50 - 12:05 and 13:00 - 16:15 [lecture]
+## Sound sensor
+	* Connect the sound sensor to wemosd1mini on vcc 3.3V, gnd and analog (a0) port
+	* Subscribe mqtt with command "mqtt("192.168.12.1", "sound")"
+	* Start it with command "analog("noise", threshold=None, precision=1)"
+	* threshold=None means that every value are published
+	* A number as threhold means that 1 or 0 will be posted which depends if the value is below or above the threhold value
+	* Start publishing with the command "run()"
+
+## Motion sensor
+	* Connect the motion sensor to the wemosd1mini on vcc 3.3V, gnd and for example d1
+	* Subscribe mqtt with command "mqtt("192.168.12.1", "motion")"
+	* Use button command to set motion sensor to the correct pin for example "button("sensor", d1, "DT", "NDT")"
+	* The first parameter of the button command is the name followed by the connected pin and the two messages
+	  when motion is detected "DT" or not detected "NDT"
+	* Start publishing with the command "run()"
+
+
+## Led strip
+Documentation ToDo
+
+
+
+# Wednesday 21. June 20:00 - 00:30
+Working on a new WebRepl for the wemosd1mini because the micropython WebRepl does not work in Firefox and Chrome
+browser on Linux and Windows just on Microsoft Edge. The new WebRepl is programmed in html5 and javascript
+using jquery and for styling the css library w3.css.
+	* Fully responsive, works on PCs, MACs, Laptops, Tablets and Smartphones
+	* Works with Firefox, Chrome and Edge (this three are tested, but should also work on Safari and Opera)
+	* Simple websocket connection for configuring wemosd1mini devices
+
+
+# Thursday 22. June 18:00 - 20:00 and 21:30 - 
+## Raspberry Pi camera
+	* Connect camera to the Rapsberry Pi camera interface
+	* Enable camera interface in the settings
+	* Start settings with "sudo raspi-config"
+	* Change the setting and save it
+	* Activate the video driver for the camer with "sudo modprobe bcm2835-v4l2"
+	* If this is not working do the command " sudo modprobe v4l2_common" first
+	* Install motion for streaming and motion detection "sudo apt-get install motion"
+	* For network streaming instead of localhost streaming, change the config file setting
+	  from "stream_localhost on" to "off" in the config file "/etc/motion/motion.conf"
+	* Motion can be started with the command "sudo motion" and stopped with the command "sudo killall motion"
+
+## Home Assistant
+### Installation
+	* Install home assistant with python pip command "pip3 install homeassistant"
+	* After installation it can be started with the command "hass --open-ui"
+	* The configuration file of the home assistant is under /home/<user>/.homeassistant
+
+### Configuration
+The configuration file of the home assistant is the "configuration.yaml" file. All devices should
+placed there. I have used the keywords "lock", "sensor", "light" and "camera".
+The following yaml code shows the configuration for the mqtt lock, the motion and sound sensors, light
+and the camera from the Raspberry Pi which is streaming over the network with motion. The
+first mqtt lines are for setting the mqtt server (broker).
+
+'''yaml
+mqtt:
+   broker: 192.168.12.1
+   client_id: home-assistant-gerald
+
+lock:
+  - platform: mqtt
+    state_topic: "lock/relay"
+    command_topic: "lock/relay/set"
+    name: "MQTT Door Lock"
+    payload_lock: "on"
+    payload_unlock: "off"
+
+sensor:
+  - platform: mqtt
+    state_topic: "sound/noise"
+    name: "Noise Level"
+
+  - platform: mqtt
+    state_topic: "motion/sensor"
+    name: "Motion Detection"
+
+light:
+  - platform: mqtt
+    command_topic: "light/switch"
+
+camera:
+  - platform: mjpeg
+    mjpeg_url: http://192.168.12.1:8081
+    name: "Surveillance Camera"
+'''
+
+To define an automation in home assistant a trigger and a action is needed. This can be managed with the
+web ui platform or directly in the configuration file for automations "automations.yaml".
+The following yaml code shows the automation which toggles the light when motion is detected.
+
+'''yaml
+- action:
+  - service: light.toggle
+  alias: Motion Detection Light Toggle
+  id: '1498162630044'
+  trigger:
+  - entity_id: sensor.motion_detection
+    from: NDT
+    platform: state
+    to: DT
+'''
+
+
 

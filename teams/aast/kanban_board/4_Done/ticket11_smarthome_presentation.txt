@@ -1,0 +1,6 @@
+Reporter: Gerald
+Assigned: Team
+Start: 2017.06.16 16:15
+Finished: 2017.06.21 03:00
+
+Description: Prepare presentation for the topic "Automate your friends home"
