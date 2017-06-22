@@ -23,32 +23,7 @@ button("motion1", d2, "detected", "not detected")
 run()
 
 ##Installing FHEM
-DEPRECATED
-On Arch Linux it can be installed with:
-sudo aura -A fhem
-
-Before fhem can be launched as normal user, the configuration has to be changed, so that it uses directories for its log, which are writable for normal users.
-
-I just pointed it towards a "fhem" folder inside my home directory.
-
-```
-attr global logfile /home/flosch/fhem/fhem-%Y-%m.log
-attr global statefile /home/flosch/fhem/fhem.save
-
-attr autocreate filelog /home/flosch/fhem/%NAME-%Y.log
-```
-
-I had the problem, that it was missing the RTypes module, so i downloaded it from:
-https://github.com/mhop/fhem-mirror/blob/master/fhem/FHEM/RTypes.pm
-And placed it in: /usr/share/fhem/FHEM
-
-Then you can launch fhem with:
-perl /bin/fhem.pl /etc/fhem.cfg
-
-After that fhem booted and was accessible through: 127.0.0.1:8083.
-
-NEW
-As the method using the user repository seems quite buggy, I decided to clone the current version from github.
+As the method using the user repository seems quite buggy (I removed the part from the personal log), I decided to clone the current version from github.
 
 git clone https://github.com/mhop/fhem-mirror.git
 
@@ -81,6 +56,7 @@ To define our lock inside fhem over mqtt use:
 
 ```
 define mqtt MQTT 192.168.12.1:1883
+define mqtt_lock MQTT_DEVICE
 attr mqtt_lock publishSet on off lock/relay/set
 attr mqtt_lock subscribeReading_state lock/relay
 ```
