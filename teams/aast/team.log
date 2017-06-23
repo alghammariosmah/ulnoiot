@@ -411,7 +411,7 @@ After the status and/or color has changed, the simulator will publish an update 
 A simulator written in Java. Sends constant temp, adapt with a slider.
 
 ### Fhem tinkering
-###setting up fhem
+###setting up fhem (windows)
 	* // http://fhem.de/HOWTO_Windows.html
 	* download fhem
 	* download strawberry perl (use msi package to update and install moduls) // extract in fhem folder
