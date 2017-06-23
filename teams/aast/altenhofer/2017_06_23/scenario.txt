@@ -1,0 +1,25 @@
+# Home Automation Project 3
+## Scenario
+	* Airbnb room for rent
+	* Landlord wquip room with home automation system (HAS)
+	* HAS should support the tenant (conviniece)
+
+## Domains
+
+### Security
+	* Usb-Cam on RPi.
+	* Motion sensor -> starts Cam when motion is detected
+	* (Android App with stream)
+
+### Media Center
+	* Kodi media system
+	* Play movie --> turn down lights
+	* (Play alarm sound --> when motion is detected)
+
+### Remote Controll
+	* Turn on/off light remotly
+	* Control ruby-led simulator via APP
+
+### Energie Efficiency
+	* Java-simulator/sensor sends temperature
+	* When temp reaches a certain threshold turn on AC/turn on heat
