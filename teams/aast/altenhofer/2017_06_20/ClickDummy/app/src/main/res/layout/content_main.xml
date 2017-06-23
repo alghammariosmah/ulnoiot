@@ -6,6 +6,25 @@
     android:padding="15dp"
     android:layout_marginTop="100dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:text="Server IP: " />
+
+    <EditText
+        android:id="@+id/server_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="enter ip address..."/>
+
+    <Button
+        android:id="@+id/btn_connect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

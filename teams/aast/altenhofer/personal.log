@@ -478,7 +478,7 @@ fhem "set mqtt_lock off" // send/set this otherwise.
 }
 
 ## 13:00 - 17:20 integrate android app to fhem
-	* import mqtt client
+	* import mqtt client to the application
 	* set app as device in fhem
 	* define mqtt_client MQTT_DEVICE // add client as device
 	* attr mqtt_client subscribeReading_command client/endpoint
@@ -521,4 +521,9 @@ fhem "set mqtt_lock off" // send/set this otherwise.
 ## 17:20 - 17:40 integrating kodi to fhem
 	* define kodi KODI 192.168.1.104 tcp
 	* integrate kodi call into application
+
+# 2017_06_23
+
+## 09:40 - xx:xx presentations
+	* 
 

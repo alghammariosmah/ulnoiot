@@ -408,7 +408,7 @@ To display the current state, the simulator colorises the terminal with the spec
 After the status and/or color has changed, the simulator will publish an update on:
 "led/1/status" and "led/1/color". Status can either be "on" or "off", whereas color defines the current color of the led.
 
-## Your friends home
+# Your friends home
 
 ### Counting
 - Windows count as one even if there are multiple glass panels
@@ -419,3 +419,78 @@ After the status and/or color has changed, the simulator will publish an update 
 - Floor 2
 * Doors: Outside 0, Inside 9 normal, 1 sliding
 * Windows: 17 window panels // bed 1= 3 windows (2 corners)
+
+## Work Package Smart Control, Gadgets
+## Time estimation
+## Voice Control (Echo Dot) Rooms where echo is needed
+Floor 1:
+* family + dining + kitchen
+* living
+* study
+Floor 2:
+* bed 1
+* bed 2 // rent
+* bed 3 // rent
+* bed 4 // rent
+* activity area
+### time estimation
+- setup phase echo dot
+  * 8 x 30 min
+
+## Smart Button
+- Connecting the Button shield
+  * 6 x 20 min
+- Setting up the Wemos D1 mini
+  * 6 x 20 min
+- Adding the buttons to home assistant
+  * 6 x 2 min
+
+## Smart Washing Machine
+- Setup
+  * 30 min
+- Testing + application testing
+  * 20 min
+
+## Client Application
+- Designing
+  * 5 h
+- Programming
+  * 40 h
+- Testing + bug fixing
+  * 5 h
+- Adding to home assistant
+  * 10 h
+## Money estimation
+## Voice Controll
+- Amazon Echo Dot 2. Generation (54.99€)
+* for voice controll commands (Alexa)
+* https://www.amazon.de/Amazon-Echo-Dot-Generation-Schwarz/dp/B01DFKBG54/ref=sr_1_2?ie=UTF8&qid=1497605135&sr=8-2&keywords=amazon+echo
+
+## Smart Washing Machine
+- Samsung Smart washing machine (669€)
+* wifi controll(control via application), add wash(add cloth during wash process), 
+* unfortunalty only able to control with samsung application.
+* https://www.amazon.de/Samsung-WW80K6404QW-EG-Waschmaschine-Inverter/dp/B01BC3TPB8/ref=sr_1_4?ie=UTF8&qid=1497607241&sr=8-4&keywords=samsung+add+wash
+
+## Smart Buttons
+- Wemos D1 Mini (3.50€)
+  
+* To control the buttons
+* https://de.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html
+
+- Wemos D1 Mini Button Shield (0.57€)
+* Handle user input
+* https://de.aliexpress.com/item/One-Button-Shield-For-WeMos-D1-Mini-Button/32738582660.html?spm=2114.010208.3.2.7XTqNa&ws_ab_test=searchweb0_0,searchweb201602_5_10152_10208_10065_10151_10068_10304_10136_10137_10060_10302_10155_10062_437_10154_5300011_10056_10055_10054_10059_303_100031_10099_10103_10102_10096_10052_10053_10142_10107_10050_10051_5030011_10084_10083_10080_10082_10081_10177_10110_519_10111_10112_10113_10114_10182_10078_10079_10073_10123_10189_142,searchweb201603_1,ppcSwitch_4&btsid=c69cd4ad-f75b-4ee8-bc59-82fa9dea2279&algo_expid=c3953b90-f773-40c5-bf17-b8ee714b50a8-0&algo_pvid=c3953b90-f773-40c5-bf17-b8ee714b50a8
+
+## Smartphone control
+- home assistant (Server side)
+* open source home automation platform using python 3
+* compatible to:
+	+ amazon echo: voice controll
+	+ IFTTT: create conditional statements (channels)
+	+ mqtt: machine to machine, IoT protocol
+
+- Custom Smartphone app (Client side) ~ 50H of work
+* sends mqtt requests to the server
+* server runs home assistant + IFTTT integration
+* send IFTTT request to devices (Philipps HUE lamp, etc.)
