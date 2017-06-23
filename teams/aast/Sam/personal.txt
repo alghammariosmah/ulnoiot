@@ -284,6 +284,8 @@ Spend so much time programming a task perfectly.
 	* run()
 	* mqtt_send RGB/RGB6/rgb/set 0,255,255
 
+
+
 ## RGB multi set up;
 	* wip // make sure to have an IP address for the Wemos, otherwise reset()
 	* mqtt("192.168.12.1","living room/tvlights")
@@ -292,6 +294,14 @@ Spend so much time programming a task perfectly.
 	* // On the pi 
 	* mqtt_send mqtt_send multi/rgb2/set on
 	* mqtt_send multi/rgb2/rgb/set red
+	* mqtt_send multi/rgb2/rgb/set "2 yellow" //setting light #2 to yellow and the rest are yellow
+
+
+
+	
+
+
+
 
 
 	

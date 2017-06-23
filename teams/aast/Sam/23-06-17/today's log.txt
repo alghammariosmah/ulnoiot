@@ -8,6 +8,8 @@
 	* // On the pi 
 	* mqtt_send mqtt_send multi/rgb2/set on
 	* mqtt_send multi/rgb2/rgb/set red
+	* mqtt_send multi/rgb2/rgb/set "2 yellow" //setting light #2 to yellow and the rest are yellow
+
 
 
 	
