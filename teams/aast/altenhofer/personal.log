@@ -528,5 +528,6 @@ fhem "set mqtt_lock off" // send/set this otherwise.
 	* your friends home
 	* 4 groups
 
-## 13:00 - 15:25 tinker with voice control
-	* try to use alexa with (fhem and home assistant)
+## 13:00 - 15:25 scenario/domain/script
+	* write domains, gather ideas
+	* write script

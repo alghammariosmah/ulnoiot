@@ -841,3 +841,17 @@ Floor 2
 ### Energie Efficiency
 	* Java-simulator/sensor sends temperature
 	* When temp reaches a certain threshold turn on AC/turn on heat
+
+## Script
+* Telefon rings...
+* Landlord answers phone, the tenant he knows from Airbnb arrived to his house and want to come in...
+* [Button open door] Landlord opens the entry door.
+* Landlord setup the client application for the tenant
+* [Enter room door via app] connect to the server, and press the unlock button in the application.
+* Tenant can enter the room.
+* [Media start] press the media on button to start the movie. [trigger lights out] light will turn out.
+* [Turn Light on via app] the tenant can turn off all lights or one by one via the application[ruby led simulator leds].
+* [Temp simulator] reaches a certain level off temperature, if it reaches the AC starts
+
+
+
