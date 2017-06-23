@@ -535,7 +535,7 @@ Floor 2:
     * To connect different devices (mainly wemos boards)
     * https://de.aliexpress.com/item/Aukey-5-Pack-Micro-USB-Cable-Fast-Charging-Adapter-5V2A-Data-Charger-Mobile-Phone-Cable-for/32637756862.html
 
-### Temperatur and humidity (0.73€)
+### Temperature and humidity (0.73€)
     * Arduino temperature and humidity sensor
     * Place in every room to monitor temperature and humidity
     * https://www.aliexpress.com/item/1pcs-DHT11-Digital-Temperature-and-Humidity-Sensor-Module-for-Arduino-UNO-R3-lot-free-shipping/32666492380.html
@@ -656,11 +656,115 @@ Floor 2:
 	* Testing + bug fixing = 5 h (20 € /hour) 
 	* Adding to home assistant = 10 h (20 €/hour)
 
+##Securing the doors, cameras & motion sensors
+Door counts (according to Chris):
+Floor 1: Outside 2, Inside 4 normal, 3 sliding
+Floor 2: Outside 0, Inside 9 normal, 1 sliding
 
-	
- 
+Camera count (public rooms):
+Floor 1
+3 x Family/Dining/Kitchen
+1 x Laundry
+2 x Living room
+2 x Garage
+1 x Private Dining Room
+1 x Study
 
+Floor 2
+1 x Activity Area
+1 x Own bed room
 
+###Securing the doors
+- Installing door locks
+  * 15 x 10 min
+- Connecting the relay
+  * 15 x 15 min
+- Connecting the NFC module
+  * 15 x 20 min
+- Setting up the Wemos D1 mini
+  * 15 x 20 min
+- Adding the doors and NFC modules to home assistant
+  * 30 x 4 min
+- Setting up the NFC access cards 
+  * 6 * 5 min
+  
+###Installing the cameras
+- Flashing and configuring the firmware
+  * 12 x 20 min
+- Placing the cameras
+  * 12 x 5 min
+- Adding the cameras to home assistant
+  * 12 x 5 min
 
+Motion sensor count:
+Floor 1
+4 x Family/Dining/Kitchen
+1 x Hallway
+1 x Laundry
+2 x Living room
+2 x Garage
+1 x Study room
+1 x Entry
 
+Floor 2
+2 x Activity area
+1 x Own bed room
 
+###Installing motion sensors
+- Connecting the motion sensor
+  * 15 x 15 min
+- Setting up the Wemos D1 mini
+  * 15 x 20 min
+- Installing the motion sensor
+  * 15 x 10 min
+- Adding the motion sensor to home assistant
+  * 15 x 5 min
+
+### Hardware
+#### Doors
+- Electrical Locks (10.50€)
+  * Used to secure the doors
+  * https://de.aliexpress.com/item/Stainless-Door-12V-DC-Fail-Safe-NO-Narrow-type-Door-Electric-Strike-Lock-For-Access-Control/32797143296.html
+
+- Wemos D1 Mini (3.50€)
+  * To control the locks
+  * https://de.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html
+  
+- Wemos D1 Relay (1.80€)
+  * To be able to plug the lock into the wemos
+  * https://de.aliexpress.com/store/product/Relay-Shield-for-WeMos-D1-mini-button/1331105_32596395175.html
+
+- NFC Module - MFRC522 (3.30€)
+  * To read the cards to grant access
+  * Works with the wemos
+  * https://de.aliexpress.com/item/Compact-RFID-Reader-Writer-and-NFC-module-MFRC522-13-56MHz-Power-5V-3-3V-For-Arduino/32667518116.html
+
+#### Motion Sensors 
+- HC-SR501 (0.60€)
+  * To automatically track presence in rooms, switch on lights, send notifications etc.
+  * https://de.aliexpress.com/item/ree-Shipping-HC-SR501-Adjust-Infrared-IR-Pyroelectric-Infrared-PIR-module-Motion-Sensor-Detector-Module-We/32710944048.html
+
+- Wemos D1 Mini (see 2017-06-15/hardware.md)
+
+## Cameras
+- Ip Camera - Xiaomi Yi 720p Camera (35.4€)
+  * Connects to wifi
+  * Streams via RTSP
+  * Modified with custom firmware to be integrated into home assistant (allows RTSP, FTP & HTTP, no more cloud services)
+  * Using the ffmpeg component
+  * https://github.com/fritz-smh/yi-hack
+  * https://de.aliexpress.com/item/Original-Xiaomi-Yi-Camera-Night-Vision-Smart-Wireless-Wifi-IP-Camera-720P-Video-Webcam-Black-for/32684248359.html
+
+#### Smartphone Client
+- Official web app
+  * Can be added to homescreen
+  * https://home-assistant.io/docs/frontend/mobile/
+
+#### Cables
+- Micro USB Cables - Aukey 5 pieces (5.80€)
+  * To connect different devices (mainly wemos boards)
+  * https://de.aliexpress.com/item/Aukey-5-Pack-Micro-USB-Cable-Fast-Charging-Adapter-5V2A-Data-Charger-Mobile-Phone-Cable-for/32637756862.html
+  
+- Pin Cables - 20 pieces (0.60€)
+  * To connect different modules (NFC, motion sensors, etc.)
+  * https://de.aliexpress.com/item/20pcs-20cm-2-54mm-1p-1p-Pin-Female-to-Female-Color-Breadboard-Cable-Jump-Wire-Jumper/32758834607.html
