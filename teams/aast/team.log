@@ -607,3 +607,60 @@ Floor 2:
 ### Overall costs
     * 1280.8€
 
+
+###Entertainment - Media Centers
+#Hardware
+	* Roku Streaming Stick 28 €
+	* Link: https://www.cnet.com/products/roku-streaming-stick-review/
+#Work
+	* Inserting 1 min
+	* Installing the app 1 min
+#Total (8 with 224 €)
+	* 3 in ground floor: 1 in big hall, 1 in the living room, 1 in the study room
+	* 5 in first floor: 4 in bedrooms, 1 in the activity area. 
+# time estimation
+	* setup Raku Streaming Set with the app = 8 x 2 min
+# Client Application (Extra)
+	* Designing = 5 h (20 € /hour) 
+	* Programming = 40 h (30 € /hour) 
+	* Testing + bug fixing = 5 h (20 € /hour) 
+
+
+###Security - Noise tracking
+#Hardware
+	* Wemos D1 Mini ~ 3.5 €
+	* Link: https://de.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html
+	* Noise Sensor (Arduino KY-038)  ~ 0.46 €
+	* Link: https://es.aliexpress.com/store/product/Microphone-Sound-Sensor-Module-for-arduino-KY-038/318950_1060263665.html
+	* Wires 0.6€
+	* total = 1.66 €
+# Work
+	* Placing the Noise Sensor ~ 5 min
+	* Connecting the Noise Sensor to Wemos D1 mini ~ 20 min
+	* Setting up the Wemos D1 mini ~ 20 min
+	* Adding the noise sensor to home assistant ~ 5 min
+	* total = 50 mins
+# Total (6 Noise trackers 2.76 Euros)
+	* 2 in ground floor: One in the garage, and one outside
+	* 4 in first floor: in every bedroom.
+	* Total hours of work ~ 5:00 hours
+# time estimation
+	* Placing the Noise Sensor = 6 * 5 min = 30 mins
+	* Connecting the Noise Sensor to Wemos D1 mini = 6 * 20 min = 2 hours
+	* Setting up the Wemos D1 mini = 6 * 20 min = 2 hours
+	* Adding the noise sensor to home assistant = 6 * 5 min = 30 mins
+	* total 5 hours. 
+# Client Application 
+	* Designing = 5 h (20 € /hour) 
+	* Programming = 40 h (30 € /hour) 
+	* Testing + bug fixing = 5 h (20 € /hour) 
+	* Adding to home assistant = 10 h (20 €/hour)
+
+
+	
+ 
+
+
+
+
+
