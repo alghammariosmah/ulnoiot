@@ -772,8 +772,9 @@ Floor 2
 # Home Automation Project 3
 ## Scenario
 	* Airbnb room for rent
-	* Landlord wquip room with home automation system (HAS)
+	* Landlord equip room with home automation system (HAS)
 	* HAS should support the tenant (conviniece)
+	* Using fhem as home automation system
 
 ## Domains
 
@@ -781,13 +782,15 @@ Floor 2
 	* Usb-Cam on RPi.
 	* Motion sensor -> starts Cam when motion is detected
 	* (Android App with stream)
+	* Sound tracking for different rooms -> control different leds color (led strip),
+	  maybe with partly simulators	
 
 ### Media Center
 	* Kodi media system
 	* Play movie --> turn down lights
 	* (Play alarm sound --> when motion is detected)
 
-### Remote Controll
+### Remote Control
 	* Turn on/off light remotly
 	* Control ruby-led simulator via APP
 
