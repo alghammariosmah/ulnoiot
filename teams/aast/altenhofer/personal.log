@@ -524,6 +524,9 @@ fhem "set mqtt_lock off" // send/set this otherwise.
 
 # 2017_06_23
 
-## 09:40 - xx:xx presentations
-	* 
+## 09:40 - 12:05 presentations
+	* your friends home
+	* 4 groups
 
+## 13:00 - 15:25 tinker with voice control
+	* try to use alexa with (fhem and home assistant)

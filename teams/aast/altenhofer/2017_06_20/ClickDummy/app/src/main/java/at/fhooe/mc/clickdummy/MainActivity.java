@@ -24,6 +24,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final String IP_EXTRA = "ip_extra";
     private static MqttClient client;
     private static String TOPIC = "client/endpoint";
     private static int QOS = 2;
@@ -91,7 +92,13 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.button_media)
     public void lightMedia() {
-        startActivity(new Intent(MainActivity.this, MediaActivity.class));
+        Intent mediaIntent = new Intent(MainActivity.this, MediaActivity.class);
+        if(validate(ipEt.getText().toString())) {
+            mediaIntent.putExtra(IP_EXTRA, ipEt.getText().toString());
+            startActivity(mediaIntent);
+        } else {
+            Toast.makeText(this, "Enter IP address", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public boolean validate(final String ip){
@@ -120,6 +127,8 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "connection: " + client.isConnected(), Toast.LENGTH_SHORT).show();
         } catch (MqttException e) {
             e.printStackTrace();
+            Toast.makeText(this, "no connection available, connect to the correct Wifi", Toast.LENGTH_SHORT).show();
+
         }
     }
 
