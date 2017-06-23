@@ -494,3 +494,116 @@ Floor 2:
 * sends mqtt requests to the server
 * server runs home assistant + IFTTT integration
 * send IFTTT request to devices (Philipps HUE lamp, etc.)
+
+## Router (access points)
+### NETGEAR R6220 Wireless Router (R6220-100PES) (75.0€)
+    * WLAN router with 2.4 GHz and 5 GHz range
+    * Standards 802.11 a/b/g/n/ac
+    * 2 external antennas
+    * WPA, WPA2 encryption
+    * WPS for smart configuration
+    * WLAN router for large homes
+    * Easy configuration with Netgear genie software
+    * http://www.mediamarkt.at/de/product/_netgear-r6220-wireless-router-r6220-100pes-1412347.html
+
+
+### NETGEAR Wireless Router WNR2000-200PES Rangermax (33.0€)
+    * WLAN router with 2.4 GHz range
+    * Standards 802.11 b/g/n
+    * Internal antennas
+    * WPA, WPA2 encryption
+    * WPS for smart configuration
+    * WLAN router for small homes
+    * Easy configuration with Netgear genie software
+    * http://www.mediamarkt.at/de/product/_netgear-wireless-router-wnr2000-200pes-rangermax-1389996.html
+
+## Smart thermostats
+### Anself WIFI smart thermostat 16A 110 ~ 240V (47.5€)
+    * Smart thermostat for electrical heaters
+    * Integrated WIFI
+    * LCD display
+    * Control the thermostat via WLAN
+    * https://de.aliexpress.com/item/16A-110-240V-Electric-Heating-WIFI-Smart-Thermostat-with-Touchscreen-LCD-Display-Durable-Programmable-Temperature-Controller/32804567411.html
+
+
+## Wemosd1mini (3.5€)
+    * Integrated WLAN
+    * ESP-8266EX microcontroller
+    * https://de.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html
+
+## Micro USB Cables - Aukey 5 pieces (5.8€)
+    * To connect different devices (mainly wemos boards)
+    * https://de.aliexpress.com/item/Aukey-5-Pack-Micro-USB-Cable-Fast-Charging-Adapter-5V2A-Data-Charger-Mobile-Phone-Cable-for/32637756862.html
+
+### Temperatur and humidity (0.73€)
+    * Arduino temperature and humidity sensor
+    * Place in every room to monitor temperature and humidity
+    * https://www.aliexpress.com/item/1pcs-DHT11-Digital-Temperature-and-Humidity-Sensor-Module-for-Arduino-UNO-R3-lot-free-shipping/32666492380.html
+
+### Shutters (2.7€)
+    * Wemosd1mini motor control shield
+    * Connect the shutters of each windows to control them
+    * https://de.aliexpress.com/store/product/Motor-Shield-For-WeMos-D1-mini-I2C-Dual-Motor-Driver-TB6612FNG-1A-V1-0-0/1331105_32700182142.html
+
+### Ventilation
+#### Wemosd1mini motor control shield (2.7€)
+    * Connect to 12/24V DC linear actuator for opening windows
+    * https://de.aliexpress.com/store/product/Motor-Shield-For-WeMos-D1-mini-I2C-Dual-Motor-Driver-TB6612FNG-1A-V1-0-0/1331105_32700182142.html
+
+#### Wemosd1mini relay shield (1.8€)
+    * Connect the relay to the ceiling fan for controling it
+    * https://de.aliexpress.com/store/product/Relay-Shield-for-WeMos-D1-mini-button/1331105_32596395175.html
+
+#### 12V linear actuator for opening windows (13.5€)
+    * Linear actuators for controlling the windows for ventilation
+    * https://www.alibaba.com/product-detail/12V-Linear-Actuator-for-Window-Open_60293988621.html?s=p
+
+#### Ceiling fan (99.0€)
+    * Ceiling fan for better ventilation
+    * http://www.hornbach.at/shop/Deckenventilator-Audubon-Ahorn-Silber/7226562/artikel.html
+
+### Lightning (1.8€)
+    * Wemosd1mini relay shield
+    * Connect the relay in a two-way connection to the lightning switches
+    * https://de.aliexpress.com/store/product/Relay-Shield-for-WeMos-D1-mini-button/1331105_32596395175.html
+
+## Hardware list
+### Smart thermostat
+    * 12 x Anself WIFI smart thermostat 16A 110 ~ 240V (47.5€)
+
+### Smart light
+    * 14 x Wemosd1mini (3.5€)
+    * 14 x Wemosd1mini relay shield (1.8€)
+
+### Smart shutter/window
+    * 18 x Wemosd1mini (3.5€)
+    * 18 x Wemosd1mini motor control shield (2.7€)
+    * 12 x 12V linear actuator for opening windows (13.5€)
+
+### Smart ceiling fan
+    * 3 x ceiling fan (99.0€)
+    * 3 x Wemosd1mini (3.5€)
+    * 3 x Wemosd1mini relay shield (1.8€)
+
+### Temperature/humidity
+    * 13 x Arduino temperature and humidity sensor (0.73€)
+
+### Wires
+    * 7 x Micro USB Cables - Aukey 5 pieces (5.80€)
+
+## Hardware costs
+### Smart thermostat
+    * 570€
+### Smart light
+    * 74.2€
+### Smart shutter/window
+    * 273.6€
+### Smart ceiling fan
+    * 312.9€
+### Temperature/humidity
+    * 9.5€
+### Wires
+    * 40.6€
+### Overall costs
+    * 1280.8€
+
