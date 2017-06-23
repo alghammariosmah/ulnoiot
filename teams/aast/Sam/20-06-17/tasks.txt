@@ -8,6 +8,16 @@
 	* run()
 	* mqtt_send RGB/RGB1/rgb/set blue // on pi console 
 
+## Toy Stick 
+	* button sw = d2
+	* VRX = d4
+	* VRY = d3
+mqtt("192.168.12.1", "ToyStick")
+button("button", d2, "depressed","pressed")
+input("vrY", d3,  report_high="on", report_low="off", pullup=True, threshold=0)
+input("vrX", d4,  report_high="on", report_low="off", pullup=True, threshold=0)
+
+
 
 
 	
