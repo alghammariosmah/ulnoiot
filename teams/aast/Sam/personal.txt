@@ -251,7 +251,16 @@ Spend so much time programming a task perfectly.
 		- RS 485: the successor of the previous one. Electrical signlaing. hald to full duplex with collision detection.
 		- DMX 512: standard digital communication. mostly used to control stage lighting/fog machines. asynchronous serial transmission. 
 		- Transmission speed 250 kbps. 
-		
+	
+
+## noise sensor
+	* setup
+	* pins: GND, 3V and a0 // noise sensor ground voltage, + and a0
+	* read the values // with help("analog")
+	* a0.read() // the a0 is the pin
+	* // read via mqtt
+	* mqtt("192.168.12.1", "noisetest")
+	* analog("noise", threshold=One, precision=1)	
 		
 ## RGB chip codes
 
