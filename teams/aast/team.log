@@ -657,6 +657,21 @@ Floor 2:
 ### Overall costs
     * 1280.8€
 
+## Working hours
+    * Configuration of all four WLAN router (1h)
+    * Installing smart thermostats, connecting to WLAN and to home assistant (5h)
+    * Soldering and flashing of all wemosd1mini (12h)
+    * Installing two-way connection for smart lightning (10h)
+    * Installing temperature/humidity sensor shield (5h)
+    * Installing linear actuators on all windows (8h)
+    * Setting up wemos for shutters and windows (10h)
+    * Building ceiling fans (4h)
+    * Setting up wemos for ceiling fans (5h)
+    * Adding all devices to home assistant (5h)
+    * Testing (2h)
+
+### Overall working hours
+    * 67h
 
 ###Entertainment - Media Centers
 #Hardware
@@ -814,6 +829,81 @@ Floor 2
   * To connect different modules (NFC, motion sensors, etc.)
   * https://de.aliexpress.com/item/20pcs-20cm-2-54mm-1p-1p-Pin-Female-to-Female-Color-Breadboard-Cable-Jump-Wire-Jumper/32758834607.html
 
+
+## Raspberry Pi camera
+        * Connect camera to the Rapsberry Pi camera interface
+        * Enable camera interface in the settings
+        * Start settings with "sudo raspi-config"
+        * Change the setting and save it
+        * Activate the video driver for the camer with "sudo modprobe bcm2835-v4l2"
+        * If this is not working do the command " sudo modprobe v4l2_common" first
+        * Install motion for streaming and motion detection "sudo apt-get install motion"
+        * For network streaming instead of localhost streaming, change the config file setting
+          from "stream_localhost on" to "off" in the config file "/etc/motion/motion.conf"
+        * Motion can be started with the command "sudo motion" and stopped with the command "sudo killall motion"
+
+## Home Assistant
+### Installation
+        * Install home assistant with python pip command "pip3 install homeassistant"
+        * After installation it can be started with the command "hass --open-ui"
+        * The configuration file of the home assistant is under /home/<user>/.homeassistant
+
+### Configuration
+The configuration file of the home assistant is the "configuration.yaml" file. All devices should
+placed there. I have used the keywords "lock", "sensor", "light" and "camera".
+The following yaml code shows the configuration for the mqtt lock, the motion and sound sensors, light
+and the camera from the Raspberry Pi which is streaming over the network with motion. The
+first mqtt lines are for setting the mqtt server (broker).
+
+'''yaml
+mqtt:
+   broker: 192.168.12.1
+   client_id: home-assistant-gerald
+
+lock:
+  - platform: mqtt
+    state_topic: "lock/relay"
+    command_topic: "lock/relay/set"
+    name: "MQTT Door Lock"
+    payload_lock: "on"
+    payload_unlock: "off"
+
+sensor:
+  - platform: mqtt
+    state_topic: "sound/noise"
+    name: "Noise Level"
+
+  - platform: mqtt
+    state_topic: "motion/sensor"
+    name: "Motion Detection"
+
+light:
+  - platform: mqtt
+    command_topic: "light/switch"
+
+camera:
+  - platform: mjpeg
+    mjpeg_url: http://192.168.12.1:8081
+    name: "Surveillance Camera"
+'''
+
+To define an automation in home assistant a trigger and a action is needed. This can be managed with the
+web ui platform or directly in the configuration file for automations "automations.yaml".
+The following yaml code shows the automation which toggles the light when motion is detected.
+
+'''yaml
+- action:
+  - service: light.toggle
+  alias: Motion Detection Light Toggle
+  id: '1498162630044'
+  trigger:
+  - entity_id: sensor.motion_detection
+    from: NDT
+    platform: state
+    to: DT
+'''
+
+
 # Home Automation Project 3
 ## Scenario
 	* Airbnb room for rent
@@ -852,6 +942,12 @@ Floor 2
 * [Media start] press the media on button to start the movie. [trigger lights out] light will turn out.
 * [Turn Light on via app] the tenant can turn off all lights or one by one via the application[ruby led simulator leds].
 * [Temp simulator] reaches a certain level off temperature, if it reaches the AC starts
+* [Camera] the tenant enters a room, the motion sensor detects the motion and the camer will be switched on
+* [Turn Light off] the light will turned off because it is now late at night
+* [Sound] the landlord watches the led strip which shows him the sound level of the 3 bed rooms
+* [Sound] the tenant is very loud so his room will show a red led
+* [Sound] the landlord goes to the tenant and tells him to be silent because it is after midnight
+
 
 
 
