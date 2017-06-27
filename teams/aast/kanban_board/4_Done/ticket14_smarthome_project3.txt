@@ -1,0 +1,6 @@
+Reporter: Chris
+Assigned: Gertsch
+Start: 2017 06 22 09:00
+Finished: 2017 06 27 9:00
+
+Description: Integrate usb cam to pi(scripts including), integrating devices to fhem.

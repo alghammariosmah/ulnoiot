@@ -1,6 +1,6 @@
 Reporter: Chris
 Assigned: Flo
 Start: 2017 06 16 11:00
-Finished: date time
+Finished: 2017 06 20 20:00
 
 Description: Research for following components: cameras & motion sensors, security (doors), smartphone control

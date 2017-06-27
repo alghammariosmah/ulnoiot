@@ -1,6 +1,6 @@
 Reporter: Chris
 Assigned: Chris
 Start: 2017 06 16 11:00
-Finished: date time
+Finished: 2017 06 20 20:00
 
 Description: Reasearch for following components: smart buttons (e.g. when toilet paper/dish soap runs out), alexa/echo/custom voice control, smart washing machine

@@ -1,0 +1,6 @@
+Reporter: Chris
+Assigned: Sam
+Start: 2017 06 22 09:00
+Finished: 2017 06 27 9:00
+
+Description: Creating the scenario, help with fhem integration of the devices.
