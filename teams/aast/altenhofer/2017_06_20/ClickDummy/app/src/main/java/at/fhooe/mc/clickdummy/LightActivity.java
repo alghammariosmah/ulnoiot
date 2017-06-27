@@ -48,13 +48,13 @@ public class LightActivity extends AppCompatActivity {
     public void allLamp(CompoundButton buttonView, boolean isChecked) {
         String msgText;
         if(isChecked) {
-            msgText = "led all on";
+            msgText = "led all off";
 
             btnLamp1.setChecked(true);
             btnLamp2.setChecked(true);
             btnLamp3.setChecked(true);
         } else {
-            msgText = "led all off";
+            msgText = "led all on";
 
             btnLamp1.setChecked(false);
             btnLamp2.setChecked(false);
@@ -67,9 +67,9 @@ public class LightActivity extends AppCompatActivity {
     public void firstLamp(CompoundButton buttonView, boolean isChecked) {
         String msgText;
         if(isChecked) {
-            msgText = "led 1 on";
-        } else {
             msgText = "led 1 off";
+        } else {
+            msgText = "led 1 on";
         }
         MainActivity.publish(msgText);
     }
@@ -78,9 +78,9 @@ public class LightActivity extends AppCompatActivity {
     public void secondLamp(CompoundButton buttonView, boolean isChecked) {
         String msgText;
         if(isChecked) {
-            msgText = "led 2 on";
-        } else {
             msgText = "led 2 off";
+        } else {
+            msgText = "led 2 on";
         }
         MainActivity.publish(msgText);
     }
@@ -89,9 +89,9 @@ public class LightActivity extends AppCompatActivity {
     public void thridLamp(CompoundButton buttonView, boolean isChecked) {
         String msgText;
         if(isChecked) {
-            msgText = "led 3 on";
-        } else {
             msgText = "led 3 off";
+        } else {
+            msgText = "led 3 on";
         }
         MainActivity.publish(msgText);
     }
