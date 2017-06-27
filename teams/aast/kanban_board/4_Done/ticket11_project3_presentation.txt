@@ -1,0 +1,6 @@
+Reporter: Gerald
+Assigned: Team
+Start: 2017.06.25 13:15
+Finished: 2017.06.27 09:00
+
+Description: Prepare presentation for the topic "Project 3"

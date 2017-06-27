@@ -948,6 +948,13 @@ The following yaml code shows the automation which toggles the light when motion
 * [Sound] the tenant is very loud so his room will show a red led
 * [Sound] the landlord goes to the tenant and tells him to be silent because it is after midnight
 
+### FHEM 
 
+* an example config file is available in "fhem.cfg"
+* which we were using for the project 3
+* devices are: lights, door lock, button shield, led strip, usb camera, android application and kodi integration
+* location of the client app: \teams\aast\altenhofer\2017_06_20\ClickDummy
+* location of the temp simulator: \teams\aast\altenhofer\temp_simulator
+* location of the led simulator: \teams\aast\schrofner\led_simulator
 
 
