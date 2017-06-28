@@ -501,8 +501,11 @@ Therfore, the program minicom or picocom can be used with the command for exampl
 
 
 ## Led strip
-Documentation ToDo
-
+	* Connect the led strip to the wemosd1mini on vcc 5V, gnd and for example d2
+	* Subscribe mqtt with command "mqtt("192.168.12.1", "ledstrip")"
+	* Activate the led strip with the command "rgb_multi("rgb2", d2, 5)"
+	* The first parameter is the topic, the second parameter is the digital pin and the third
+	  parameter is the number of leds on the stripp
 
 
 # Wednesday 21. June 20:00 - 00:30
@@ -514,7 +517,7 @@ using jquery and for styling the css library w3.css.
 	* Simple websocket connection for configuring wemosd1mini devices
 
 
-# Thursday 22. June 18:00 - 20:00 and 21:30 - 
+# Thursday 22. June 18:00 - 20:00 and 21:30 - 02:30
 ## Raspberry Pi camera
 	* Connect camera to the Rapsberry Pi camera interface
 	* Enable camera interface in the settings
@@ -588,5 +591,21 @@ The following yaml code shows the automation which toggles the light when motion
     to: DT
 '''
 
+# Friday 23. June 08:50 - 12:05 and 13:00 - 15:25 [lecture]
+	* Presentation of "Automate your Friends Home"
+	* Prepare script for final project 3
+
+# Sunday 25. June 18:00 - 20:00
+	* Implementing sound simulator
+
+# Monday 26. June 20:00 - 02:00
+	* Implementing camera script
+	* Configuration of rpi camera and sound simulator
+	* Preparation of presentation for final project
+	* Combining all wemosd1mini devices and simulators
+
+# Tuesday 27. June 09:00 - 11:00 [lecture]
+	* Final presentations
+	* Returning hardware
 
 

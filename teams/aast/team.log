@@ -842,6 +842,14 @@ Floor 2
           from "stream_localhost on" to "off" in the config file "/etc/motion/motion.conf"
         * Motion can be started with the command "sudo motion" and stopped with the command "sudo killall motion"
 
+## Led strip
+        * Connect the led strip to the wemosd1mini on vcc 5V, gnd and for example d2
+        * Subscribe mqtt with command "mqtt("192.168.12.1", "ledstrip")"
+        * Activate the led strip with the command "rgb_multi("rgb2", d2, 5)"
+        * The first parameter is the topic, the second parameter is the digital pin and the third
+          parameter is the number of leds on the strip
+
+
 ## Home Assistant
 ### Installation
         * Install home assistant with python pip command "pip3 install homeassistant"
@@ -956,5 +964,12 @@ The following yaml code shows the automation which toggles the light when motion
 * location of the client app: \teams\aast\altenhofer\2017_06_20\ClickDummy
 * location of the temp simulator: \teams\aast\altenhofer\temp_simulator
 * location of the led simulator: \teams\aast\schrofner\led_simulator
+* location of the sound simulator: \teams\aast\teufl\sound_simulator
+* location of the light simulator: \teams\aast\teufl\light_simulator
+* location of the rpi camera script: \teams\aast\teufl\rpi_camera
+
+#### Problems
+We had some troubles with fhem concerning the led strip commands which have a blank between the set value for example
+"ledstrip/rgb2/rgb/set 2 red".
 
 
