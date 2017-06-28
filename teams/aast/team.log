@@ -967,6 +967,7 @@ The following yaml code shows the automation which toggles the light when motion
 * location of the sound simulator: \teams\aast\teufl\sound_simulator
 * location of the light simulator: \teams\aast\teufl\light_simulator
 * location of the rpi camera script: \teams\aast\teufl\rpi_camera
+* location of the AlternativeWebRepl: \teams\aast\teufl\AlternativeWebRepl
 
 #### Problems
 We had some troubles with fhem concerning the led strip commands which have a blank between the set value for example
